@@ -1,0 +1,12 @@
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #740001;
+  color: #ffffff;
+  height: 100px;
+  width: 100%;
+  font-family: "Harry Potter", sans-serif;
+  letter-spacing: 3px;
+}
