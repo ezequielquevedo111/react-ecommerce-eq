@@ -1,12 +1,27 @@
-import { Box } from "@mui/material";
-import styles from "./ItemListContainer.module.css";
+import ItemList from "./ItemList";
+import { productosMagicos } from "../../../productsMock";
+import { useEffect, useState } from "react";
 
 const ItemListContainer = ({ greeting }) => {
-  return (
-    <Box>
-      <h2 className={styles.title}>{greeting}</h2>
-    </Box>
-  );
+  const [saveProducts, setSaveProducts] = useState([]);
+
+  useEffect(() => {
+    const getData = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(productosMagicos);
+      }, 2000);
+    });
+
+    getData
+      .then((res) => {
+        setSaveProducts(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  return <ItemList greeting={greeting} products={saveProducts}></ItemList>;
 };
 
 export default ItemListContainer;

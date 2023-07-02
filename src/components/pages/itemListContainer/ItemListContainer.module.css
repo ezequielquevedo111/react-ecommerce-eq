@@ -1,1 +1,13 @@
-
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e2c046;
+  font-size: 30px;
+  color: #810909;
+  height: 950px;
+  width: 100%;
+  text-align: center;
+  font-family: "Harry Potter", sans-serif;
+  letter-spacing: 3px;
+}

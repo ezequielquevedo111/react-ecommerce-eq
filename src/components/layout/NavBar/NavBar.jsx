@@ -1,4 +1,4 @@
-import CartWidget from "./CartWidget/CartWidget";
+import CartWidget from "../../common/CartWidget/cartWidget/CartWidget";
 import styles from "./NavBar.module.css";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -9,9 +9,9 @@ function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="fixed"
+        position="static"
         sx={{
-          backgroundColor: "#740001",
+          backgroundColor: "#e2c046",
           height: "120px",
           flexDirection: "row",
           justifyContent: "space-around",
@@ -27,9 +27,9 @@ function NavBar() {
         <Toolbar>
           <Button
             sx={{
-              backgroundColor: "#740001",
+              backgroundColor: "#e2c046",
               fontFamily: "Harry Potter",
-              color: "#ffffff",
+              color: "#810909",
               margin: "10px",
             }}
           >
@@ -37,9 +37,9 @@ function NavBar() {
           </Button>
           <Button
             sx={{
-              backgroundColor: "#740001",
+              backgroundColor: "#e2c046",
               fontFamily: "Harry Potter",
-              color: "#ffffff",
+              color: "#810909",
               margin: "10px",
             }}
           >
@@ -47,9 +47,9 @@ function NavBar() {
           </Button>
           <Button
             sx={{
-              backgroundColor: "#740001",
+              backgroundColor: "#e2c046",
               fontFamily: "Harry Potter",
-              color: "#ffffff",
+              color: "#810909",
               margin: "10px",
             }}
           >
