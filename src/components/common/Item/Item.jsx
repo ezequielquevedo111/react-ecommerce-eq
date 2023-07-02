@@ -19,7 +19,7 @@ const Item = () => {
       gridAutoColumns={"300px"}
       justifyContent={"center"}
       alignContent={"center"}
-      templateRows=" 0.5fr 0.5fr"
+      templateRows=" 0.5fr"
       alignItems={"center"}
     >
       <Card maxW="sm" backgroundColor={"#f2e8d8"} color={"#333333"}>
@@ -34,7 +34,7 @@ const Item = () => {
           />
           <Stack mt="6" spacing="3">
             <Heading size="md" fontFamily={"Harry Potter"}>
-              Living room Sofa
+              Varita de Sauco
             </Heading>
             <Text fontSize={"12px"}>
               This sofa is perfect for modern tropical spaces, baroque inspired
