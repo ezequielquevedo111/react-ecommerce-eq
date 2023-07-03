@@ -4,15 +4,14 @@ import { useEffect, useState } from "react";
 
 const ItemListContainer = ({ greeting }) => {
   const [saveProducts, setSaveProducts] = useState([]);
-
   useEffect(() => {
-    const getData = new Promise((resolve) => {
+    const getProducts = new Promise((resolve) => {
       setTimeout(() => {
         resolve(productosMagicos);
       }, 2000);
     });
 
-    getData
+    getProducts
       .then((res) => {
         setSaveProducts(res);
       })

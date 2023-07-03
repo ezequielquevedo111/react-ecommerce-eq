@@ -11,46 +11,54 @@ import {
   Grid,
 } from "@chakra-ui/react";
 
-const Item = () => {
+const Item = ({ products }) => {
   return (
     <Grid
-      width={"100%"}
-      height={"1000px"}
-      gridAutoColumns={"300px"}
-      justifyContent={"center"}
-      alignContent={"center"}
-      templateRows=" 0.5fr"
+      autoRows={"600px"}
+      gridTemplateColumns={"1fr 1fr 1fr"}
+      rowGap={"25px"}
       alignItems={"center"}
+      justifyItems={"center"}
+      flexWrap={"wrap"}
     >
-      <Card maxW="sm" backgroundColor={"#f2e8d8"} color={"#333333"}>
-        <CardBody>
-          <Image
-            src="https://res.cloudinary.com/dzzp3rans/image/upload/v1687817602/varita-de-sauco.png"
-            alt="Green double couch with wooden legs"
-            borderRadius="lg"
-            maxWidth="100%"
-            height="150px"
-            objectFit="contain"
-          />
-          <Stack mt="6" spacing="3">
-            <Heading size="md" fontFamily={"Harry Potter"}>
-              Varita de Sauco
-            </Heading>
-            <Text fontSize={"12px"}>
-              This sofa is perfect for modern tropical spaces, baroque inspired
-              spaces, earthy toned spaces and for people who love a chic design
-              with a sprinkle of vintage design.
-            </Text>
-          </Stack>
-        </CardBody>
-        <CardFooter>
-          <ButtonGroup spacing="2" size="sm">
-            <Button variant="solid" backgroundColor={"#c68e01"}>
-              Ver
-            </Button>
-          </ButtonGroup>
-        </CardFooter>
-      </Card>
+      {products.map((product) => {
+        return (
+          <Card
+            maxW="sm"
+            backgroundColor={"#f2e8d8"}
+            color={"#333333"}
+            key={product.id}
+            height={"460px"}
+            display={"flex"}
+            flexDirection={"column"}
+          >
+            <CardBody>
+              <Image
+                src={product.img}
+                alt="Green double couch with wooden legs"
+                borderRadius="lg"
+                maxWidth="100%"
+                height={"150px"}
+                margin={"auto"}
+                objectFit="contain"
+              />
+              <Stack mt="6" spacing="3">
+                <Heading size="md" fontFamily={"Harry Potter"}>
+                  {product.title}
+                </Heading>
+                <Text fontSize={"14px"}>{product.description}</Text>
+              </Stack>
+            </CardBody>
+            <CardFooter>
+              <ButtonGroup spacing="2" size="sm">
+                <Button variant="solid" backgroundColor={"#c68e01"}>
+                  Ver
+                </Button>
+              </ButtonGroup>
+            </CardFooter>
+          </Card>
+        );
+      })}
     </Grid>
   );
 };
