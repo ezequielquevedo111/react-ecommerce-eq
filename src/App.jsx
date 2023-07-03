@@ -11,7 +11,7 @@ function App() {
         <Box>
           <NavBar />
           <ItemListContainer
-            greeting={"Los productos magicos que tanto deseas"}
+            greeting={"Los productos mágicos que tanto deseas"}
           />
           <Footer />
         </Box>
