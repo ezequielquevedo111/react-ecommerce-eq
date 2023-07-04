@@ -13,12 +13,14 @@ import {
 const Item = ({ products }) => {
   return (
     <Grid
-      autoRows={"600px"}
+      autoRows={"400px"}
       gridTemplateColumns={"1fr 1fr 1fr 1fr"}
-      rowGap={"25px"}
+      gap={"25px"}
       alignItems={"center"}
+      alignSelf={"center"}
       justifyItems={"center"}
-      flexWrap={"wrap"}
+      templateRows={"400px"}
+      paddingTop={"100px"}
     >
       {products.map((product) => {
         return (

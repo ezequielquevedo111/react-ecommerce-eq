@@ -12,22 +12,22 @@ import {
 function NavBar() {
   return (
     <Grid
-      templateColumns="2fr 1fr"
+      templateColumns="1fr 1fr"
       templateRows="1fr"
       alignItems={"center"}
+      justifyItems={"center"}
       backgroundColor={"#0e1428"}
       color={"#c68e01"}
-      fontFamily={"Harry Potter"}
       position={"sticky"}
     >
-      <GridItem>
+      <GridItem paddingRight={"100px"}>
         <Image
           className={styles.logo}
           alt=""
           src="https://res.cloudinary.com/dzzp3rans/image/upload/v1688335019/LOGOTIPO_xquq7p.png"
         />
       </GridItem>
-      <GridItem>
+      <GridItem paddingRight={"50px"}>
         <Breadcrumb separator=" " fontSize={"20px"}>
           <BreadcrumbItem>
             <BreadcrumbLink href="#">Home</BreadcrumbLink>
