@@ -1,17 +1,10 @@
 import ItemList from "./ItemList";
-import { productosMagicos } from "../../../productsMock";
 import { useEffect, useState } from "react";
-
+import { getMagicProducts } from "../../../utils/AsyncMock/AsyncMock";
 const ItemListContainer = ({ greeting }) => {
   const [saveProducts, setSaveProducts] = useState([]);
   useEffect(() => {
-    const getProducts = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(productosMagicos);
-      }, 2000);
-    });
-
-    getProducts
+    getMagicProducts
       .then((res) => {
         setSaveProducts(res);
       })

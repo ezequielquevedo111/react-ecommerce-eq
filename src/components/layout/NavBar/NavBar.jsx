@@ -18,7 +18,6 @@ function NavBar() {
       justifyItems={"center"}
       backgroundColor={"#0e1428"}
       color={"#c68e01"}
-      position={"sticky"}
     >
       <GridItem paddingRight={"100px"}>
         <Image

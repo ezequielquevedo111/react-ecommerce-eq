@@ -1,5 +1,7 @@
+import ItemContainer from "../../common/Item/ItemContainer";
+
 const ItemDetail = () => {
-  return <div>ItemDetail</div>;
+  return <ItemContainer />;
 };
 
 export default ItemDetail;
