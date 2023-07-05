@@ -5,8 +5,9 @@
   align-items: center;
   background-color: #0e1428;
   color: #c68e01;
-  height: 100px;
+  height: 250px;
   width: 100%;
   font-family: "Harry Potter", sans-serif;
   letter-spacing: 3px;
+  padding-top: 20px;
 }
