@@ -239,4 +239,64 @@ export let productosMagicos = [
     category: "ingrediente poción",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688488569/aconito_owfvny.webp",
   },
+  {
+    id: 25,
+    title: "Anillo de Sorvolo Gaunt (Horrocrux)",
+    price: 70000,
+    stock: 3,
+    description:
+      "El anillo de Sorvolo Gaunt fue una reliquia de la Casa Gaunt , descendientes de Salazar Slytherin y Cadmus Peverell. Es un anillo de oro insertado con una piedra negra, siendo en realidad la Piedra de la Resurrección",
+    category: "horrocrux",
+    img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/anillo_de_sorvolo_gaunt-removebg-preview_yeht1l.png",
+  },
+  {
+    id: 26,
+    title: "Diario de Tom Ryddle (Horrocrux)",
+    price: 85000,
+    stock: 2,
+    description:
+      "El Diario de Tom Ryddle era un simple diario en blanco, que Tom Riddle transformó en un Horrocrux. El diario se convirtió en un Horrocrux en 1943, durante el sexto año de Ryddle en el Colegio Hogwarts de Magia y Hechicería. Fue el primer Horrocrux que hizo y fue usado como un arma.",
+    category: "horrocrux",
+    img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/diario_de_tom_riddle-removebg-preview_zlzcoz.png",
+  },
+  {
+    id: 27,
+    title: "Copa de Helga Hufflepuff (Horrocrux)",
+    price: 65000,
+    stock: 3,
+    description:
+      "La copa de Hufflepuff fue un objeto mágico creado por Helga Hufflepuff, una de los cuatro fundadoros del Colegio Hogwarts de Magia y Hechicería.  Lord Voldemort transformó la copa en su cuarto Horrocrux",
+    category: "horrocrux",
+    img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/copa_de_helga_huffelpuff-removebg-preview_yfyldf.png",
+  },
+  {
+    id: 28,
+    title: "Guardapelo de Salazar Slytherin (Horrocrux)",
+    price: 80000,
+    stock: 2,
+    description:
+      "El guardapelo de Salazar Slytherin era el tercer Horrocrux que Lord Voldemort seleccionó por dos razones: tenia un gran valor ya que le perteneció al mismísimo Salazar Slytherin y porque él pensaba que le pertenecía ya que el guardapelo y el anillo estuvieron en su familia por generaciones.",
+    category: "horrocrux",
+    img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/guardapelo-removebg-preview_icq88a.png",
+  },
+  {
+    id: 29,
+    title: "Diadema de Rowena Ravenclaw (Horrocrux)",
+    price: 75000,
+    stock: 3,
+    description:
+      "La Diadema de Ravenclaw (también conocida como la Diadema perdida de Ravenclaw) fue la única reliquia conocida que perteneció a Rowena Ravenclaw, la fundadora de la Casa de Ravenclaw.",
+    category: "horrocrux",
+    img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/diadema-de-rowena-ravenclaw-harry-potter-removebg-preview_ijz8cj.png",
+  },
+  {
+    id: 30,
+    title: "Nagini (Horrocrux)",
+    price: 85000,
+    stock: 2,
+    description:
+      "Nagini fue una humana maledictus con una maldición sanguínea que terminaría convirtiéndole en una serpiente gigante.",
+    category: "horrocrux",
+    img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/magical-creature-figurine-nagini-removebg-preview_t5fjvv.png",
+  },
 ];
