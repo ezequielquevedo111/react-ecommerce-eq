@@ -14,7 +14,14 @@ function App() {
         <Routes>
           {/*Ruta principal */}
           <Route element={<Layout />}>
-            <Route path="/" element={<ItemListContainer />} />
+            <Route
+              path="/"
+              element={
+                <ItemListContainer
+                  greeting={"Los productos mágicos que tanto deseas"}
+                />
+              }
+            />
             {/*Ruta personalizada */}
             <Route path="/carrito" element={<h1>Este es el home</h1>} />
           </Route>
