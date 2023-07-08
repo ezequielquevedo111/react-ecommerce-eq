@@ -38,10 +38,21 @@ const Item = ({ product }) => {
         </Stack>
       </CardBody>
       <CardFooter backgroundColor={"#73877B "} borderRadius="sm">
-        <ButtonGroup spacing="2" size="sm">
-          <Button variant="solid" backgroundColor={"#f2e8d8"}>
+        <ButtonGroup
+          spacing="2"
+          height={"30px"}
+          width={"80px"}
+          fontSize={"14px"}
+          backgroundColor={"#f2e8d8"}
+          borderRadius={"2px"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          {/* <Button variant="solid" backgroundColor={"#f2e8d8"}>
             Ver mas
-          </Button>
+          </Button> */}
+          <Link to={`/itemDetail/:${product.id}`}>Ver más</Link>
         </ButtonGroup>
       </CardFooter>
     </Card>

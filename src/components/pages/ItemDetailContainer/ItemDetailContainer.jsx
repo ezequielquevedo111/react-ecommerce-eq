@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { productosMagicos } from "../../../productsMock";
-import ItemDetail from "./ItemDetail";
+
 import Item from "../../common/Item/Item";
 
 const ItemDetailContainer = () => {
