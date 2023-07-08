@@ -8,6 +8,7 @@ import {
   Button,
   ButtonGroup,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
   return (
@@ -39,7 +40,7 @@ const Item = ({ product }) => {
       <CardFooter backgroundColor={"#73877B "} borderRadius="sm">
         <ButtonGroup spacing="2" size="sm">
           <Button variant="solid" backgroundColor={"#f2e8d8"}>
-            Ver más
+            Ver mas
           </Button>
         </ButtonGroup>
       </CardFooter>

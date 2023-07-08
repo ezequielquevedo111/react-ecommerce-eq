@@ -1,10 +1,8 @@
-import Footer from "./components/layout/Footer/Footer";
 import Layout from "./components/layout/Layout";
-import NavBar from "./components/layout/NavBar/NavBar";
-// import ItemDetailContainer from "./components/pages/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ItemDetailContainer from "./components/pages/ItemDetailContainer/ItemDetailContainer";
 
 // Realizar enrutado home, carrito de compra, ruta de detail, del checkout.
 function App() {
@@ -22,10 +20,9 @@ function App() {
                 />
               }
             />
-            {/*Ruta personalizada */}
-            <Route path="/carrito" element={<h1>Este es el home</h1>} />
+            <Route path="/itemDetail" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<h1>Esta es la pagina del cart</h1>} />
           </Route>
-          {/*Ruta para poner por defecto en el caso que no lo encuentre */}
           <Route path="*" element={<h1>404 not found</h1>} />
         </Routes>
       </BrowserRouter>

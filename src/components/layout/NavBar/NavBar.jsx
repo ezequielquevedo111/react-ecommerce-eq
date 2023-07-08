@@ -20,15 +20,16 @@ function NavBar() {
       backgroundColor={"#0e1428"}
       color={"#c68e01"}
     >
-      <Link>
-        <GridItem paddingRight={"100px"}>
+      <GridItem paddingRight={"100px"}>
+        <Link to="/">
           <Image
             className={styles.logo}
             alt=""
             src="https://res.cloudinary.com/dzzp3rans/image/upload/v1688335019/LOGOTIPO_xquq7p.png"
-          />
-        </GridItem>
-      </Link>
+          />{" "}
+        </Link>
+      </GridItem>
+
       <GridItem paddingRight={"50px"}>
         <Breadcrumb separator=" " fontSize={"20px"}>
           <BreadcrumbItem>

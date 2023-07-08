@@ -1,11 +1,26 @@
-// import ItemContainer from "../../common/Item/ItemContainer";
-// import CounterContainer from "../../common/counter/CounterContainer";
+import { useEffect, useState } from "react";
+import { productosMagicos } from "../../../productsMock";
+import ItemDetail from "./ItemDetail";
+import Item from "../../common/Item/Item";
 
 const ItemDetailContainer = () => {
+  const [oneProduct, setOneProduct] = useState([]);
+  let id = 2;
+  useEffect(() => {
+    let productFound = productosMagicos.find((product) => product.id === id);
+    console.log(productFound);
+    const productSelected = new Promise((res, rej) => {
+      res(productFound);
+    });
+    productSelected.then((res) => setOneProduct([res]));
+  }, []);
+  console.log(oneProduct);
+
   return (
     <div>
-      {/* <ItemContainer /> */}
-      {/* <CounterContainer /> */}
+      {oneProduct.map((product) => {
+        return <Item product={product} key={product.id} />;
+      })}
     </div>
   );
 };
