@@ -11,7 +11,6 @@ const ItemDetailContainer = () => {
     let productFound = productosMagicos.find(
       (product) => product.id === Number(id)
     );
-    console.log(productFound);
     const productSelected = new Promise((res, rej) => {
       res(productFound);
     });
