@@ -1,26 +1,20 @@
-import { Image, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import CartWidget from "../../common/CartWidget/cartWidget/CartWidget";
 import styles from "./NavBar.module.css";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Grid,
-  GridItem,
-} from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, Grid, GridItem } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <Grid
-      templateColumns="1fr 1fr"
+      templateColumns="0.7fr 1fr"
       templateRows="1fr"
       alignItems={"center"}
       justifyItems={"center"}
       backgroundColor={"#0e1428"}
       color={"#c68e01"}
     >
-      <GridItem paddingRight={"100px"}>
+      <GridItem>
         <Link to="/">
           <Image
             className={styles.logo}
@@ -33,23 +27,16 @@ function NavBar() {
       <GridItem paddingRight={"50px"}>
         <Breadcrumb separator=" " fontSize={"20px"}>
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">Home</BreadcrumbLink>
+            <Link>Varitas</Link>
           </BreadcrumbItem>
-
           <BreadcrumbItem>
-            {/* <BreadcrumbLink href="#">Categorias</BreadcrumbLink> */}
-            <Menu>
-              <MenuButton>Categorias</MenuButton>
-              <MenuList>
-                <MenuItem>New Window</MenuItem>
-                <MenuItem>Open Closed Tab</MenuItem>
-                <MenuItem>Open File</MenuItem>
-              </MenuList>
-            </Menu>
+            <Link>Pociones</Link>
           </BreadcrumbItem>
-
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">Nosotros</BreadcrumbLink>
+            <Link>Ingredientes</Link>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <Link>Horrocruxes</Link>
           </BreadcrumbItem>
           <CartWidget />
         </Breadcrumb>
