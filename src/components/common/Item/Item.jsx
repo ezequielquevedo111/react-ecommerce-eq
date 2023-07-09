@@ -49,10 +49,7 @@ const Item = ({ product }) => {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          {/* <Button variant="solid" backgroundColor={"#f2e8d8"}>
-            Ver mas
-          </Button> */}
-          <Link to={`/itemDetail/:${product.id}`}>Ver más</Link>
+          <Link to={`/itemDetail/${product.id}`}>Ver más</Link>
         </ButtonGroup>
       </CardFooter>
     </Card>
