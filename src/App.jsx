@@ -20,11 +20,12 @@ function App() {
                 />
               }
             />
-            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
             <Route
               path="/categoryProduct/:category"
-              element={<ItemDetailContainer />}
+              element={<ItemListContainer />}
             />
+            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+
             <Route path="/cart" element={<h1>Esta es la pagina del cart</h1>} />
           </Route>
           <Route path="*" element={<h1>404 not found</h1>} />

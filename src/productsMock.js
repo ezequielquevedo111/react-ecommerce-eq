@@ -176,7 +176,7 @@ export let productosMagicos = [
     stock: 40,
     description:
       "Es una sustancia viscosa de color verde que es extraída de los gusarajos. Además este moco también se encuentra esparcido por todas las vigas del techo en el ático de Hogwarts.",
-    category: "ingrediente poción",
+    category: "ingredientes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-moco-de-gusarajo.webp",
   },
   {
@@ -186,7 +186,7 @@ export let productosMagicos = [
     stock: 40,
     description:
       "Quitarles las alas a una hada no es letal para ellas, pero le causará una molestia extrema a la hada afectada, ya que estas criaturas son vanidosas por naturaleza. Ya que las hadas son muy difíciles de capturar y de aproximarse a ellas, sus alas se consideran un preciado ingrediente.",
-    category: "ingrediente poción",
+    category: "ingredientes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-alas-de-hada.webp",
   },
   {
@@ -196,7 +196,7 @@ export let productosMagicos = [
     stock: 40,
     description:
       "Los bicornios poseen dos grandes cuernos. Estos cuernos se les caen cada año, y son recolectados cuando el bicornio no está mirando. Es un ingrediente muy raro de conseguir, y no suele estar disponible a la venta para los estudiantes de Hogwarts.",
-    category: "ingrediente poción",
+    category: "ingredientes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688486456/ingrediente_-_Cuerno_de_bicornio_qb83nh.webp",
   },
   {
@@ -206,7 +206,7 @@ export let productosMagicos = [
     stock: 40,
     description:
       "Es una planta mágica utilizada en la elaboración de pociones. Es una hierba curativa poderosa y reconstituyente. Al aplicarse sobre una herida, crece piel fresca y le da un aspecto de varios días.",
-    category: "ingrediente poción",
+    category: "ingredientes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-dictamo.webp",
   },
   {
@@ -216,7 +216,7 @@ export let productosMagicos = [
     stock: 40,
     description:
       "El aguijón de billywig es el apéndice inferior en forma de punta de un billywig. Tiene una forma larga y fina, y posee propiedades mágicas: las víctimas de la picadura experimentan mareos, seguidos de levitación.",
-    category: "ingrediente poción",
+    category: "ingredientes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-aguijon-de-billywig.webp",
   },
   {
@@ -226,7 +226,7 @@ export let productosMagicos = [
     stock: 40,
     description:
       "El asfódelo se encuentra en todo el mundo y se sabe que crece en los terrenos de Hogwarts. La planta no es originaria de Gran Bretaña o Irlanda y requiere tierra especial para crecer.Los muggles solían creer que la planta crecía bajo tierra. Existen dieciséis tipos conocidos de estas plantas, cada uno con sus propias necesidades.",
-    category: "ingrediente poción",
+    category: "ingredientes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-asfodelo.webp",
   },
   {
@@ -236,7 +236,7 @@ export let productosMagicos = [
     stock: 40,
     description:
       "Una vez extendida, esta planta ahora solo se encuentra en lugares silvestres. Sus flores son útiles para hacer pociones, pero sus hojas son muy tóxicas. Su raíz se puede utilizar como ingrediente de pociones. El acónito se conoce más comúnmente como un ingrediente de poción Matalobos, pero también es un ingrediente de la Poción de despertares.",
-    category: "ingrediente poción",
+    category: "ingredientes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688488569/aconito_owfvny.webp",
   },
   {
@@ -246,7 +246,7 @@ export let productosMagicos = [
     stock: 3,
     description:
       "El anillo de Sorvolo Gaunt fue una reliquia de la Casa Gaunt , descendientes de Salazar Slytherin y Cadmus Peverell. Es un anillo de oro insertado con una piedra negra, siendo en realidad la Piedra de la Resurrección",
-    category: "horrocrux",
+    category: "horrocruxes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/anillo_de_sorvolo_gaunt-removebg-preview_yeht1l.png",
   },
   {
@@ -256,7 +256,7 @@ export let productosMagicos = [
     stock: 2,
     description:
       "El Diario de Tom Ryddle era un simple diario en blanco, que Tom Riddle transformó en un Horrocrux. El diario se convirtió en un Horrocrux en 1943, durante el sexto año de Ryddle en el Colegio Hogwarts de Magia y Hechicería. Fue el primer Horrocrux que hizo y fue usado como un arma.",
-    category: "horrocrux",
+    category: "horrocruxes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/diario_de_tom_riddle-removebg-preview_zlzcoz.png",
   },
   {
@@ -266,7 +266,7 @@ export let productosMagicos = [
     stock: 3,
     description:
       "La copa de Hufflepuff fue un objeto mágico creado por Helga Hufflepuff, una de los cuatro fundadoros del Colegio Hogwarts de Magia y Hechicería.  Lord Voldemort transformó la copa en su cuarto Horrocrux",
-    category: "horrocrux",
+    category: "horrocruxes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/copa_de_helga_huffelpuff-removebg-preview_yfyldf.png",
   },
   {
@@ -276,7 +276,7 @@ export let productosMagicos = [
     stock: 2,
     description:
       "El guardapelo de Salazar Slytherin era el tercer Horrocrux que Lord Voldemort seleccionó por dos razones: tenia un gran valor ya que le perteneció al mismísimo Salazar Slytherin y porque él pensaba que le pertenecía ya que el guardapelo y el anillo estuvieron en su familia por generaciones.",
-    category: "horrocrux",
+    category: "horrocruxes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/guardapelo-removebg-preview_icq88a.png",
   },
   {
@@ -286,7 +286,7 @@ export let productosMagicos = [
     stock: 3,
     description:
       "La Diadema de Ravenclaw (también conocida como la Diadema perdida de Ravenclaw) fue la única reliquia conocida que perteneció a Rowena Ravenclaw, la fundadora de la Casa de Ravenclaw.",
-    category: "horrocrux",
+    category: "horrocruxes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/diadema-de-rowena-ravenclaw-harry-potter-removebg-preview_ijz8cj.png",
   },
   {
@@ -296,7 +296,7 @@ export let productosMagicos = [
     stock: 2,
     description:
       "Nagini fue una humana maledictus con una maldición sanguínea que terminaría convirtiéndole en una serpiente gigante.",
-    category: "horrocrux",
+    category: "horrocruxes",
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/magical-creature-figurine-nagini-removebg-preview_t5fjvv.png",
   },
 ];

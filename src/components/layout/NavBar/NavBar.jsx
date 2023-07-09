@@ -27,16 +27,16 @@ function NavBar() {
       <GridItem paddingRight={"50px"}>
         <Breadcrumb separator=" " fontSize={"20px"}>
           <BreadcrumbItem>
-            <Link>Varitas</Link>
+            <Link to="/categoryProduct/varitas">Varitas</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link>Pociones</Link>
+            <Link to="/categoryProduct/pociones">Pociones</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link>Ingredientes</Link>
+            <Link to="/categoryProduct/ingredientes">Ingredientes</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link>Horrocruxes</Link>
+            <Link to="/categoryProduct/horrocruxes">Horrocruxes</Link>
           </BreadcrumbItem>
           <CartWidget />
         </Breadcrumb>
