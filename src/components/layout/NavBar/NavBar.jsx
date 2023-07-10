@@ -1,4 +1,4 @@
-import { Image } from "@chakra-ui/react";
+import { BreadcrumbLink, Image } from "@chakra-ui/react";
 import CartWidget from "../../common/CartWidget/cartWidget/CartWidget";
 import styles from "./NavBar.module.css";
 import { Breadcrumb, BreadcrumbItem, Grid, GridItem } from "@chakra-ui/react";
@@ -27,16 +27,24 @@ function NavBar() {
       <GridItem paddingRight={"50px"}>
         <Breadcrumb separator=" " fontSize={"20px"}>
           <BreadcrumbItem>
-            <Link to="/categoryProduct/varitas">Varitas</Link>
+            <BreadcrumbLink as={Link} to="/categoryProduct/varitas">
+              Varitas
+            </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link to="/categoryProduct/pociones">Pociones</Link>
+            <BreadcrumbLink as={Link} to="/categoryProduct/pociones">
+              Pociones
+            </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link to="/categoryProduct/ingredientes">Ingredientes</Link>
+            <BreadcrumbLink as={Link} to="/categoryProduct/ingredientes">
+              Ingredientes
+            </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link to="/categoryProduct/horrocruxes">Horrocruxes</Link>
+            <BreadcrumbLink as={Link} to="/categoryProduct/horrocruxes">
+              Horrocruxes
+            </BreadcrumbLink>
           </BreadcrumbItem>
           <CartWidget />
         </Breadcrumb>
