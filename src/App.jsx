@@ -4,13 +4,11 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/pages/ItemDetailContainer/ItemDetailContainer";
 
-// Realizar enrutado home, carrito de compra, ruta de detail, del checkout.
 function App() {
   return (
     <ChakraProvider>
       <BrowserRouter>
         <Routes>
-          {/*Ruta principal */}
           <Route element={<Layout />}>
             <Route
               path="/"

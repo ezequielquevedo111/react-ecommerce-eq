@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { productosMagicos } from "../../../productsMock";
 import Item from "../../common/Item/Item";
 import { useParams } from "react-router-dom";
-import { Box, Grid, Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 
 const ItemDetailContainer = () => {
   const [oneProduct, setOneProduct] = useState([]);
@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
     let productFound = productosMagicos.find(
       (product) => product.id === Number(id)
     );
-    const productSelected = new Promise((res, rej) => {
+    const productSelected = new Promise((res) => {
       res(productFound);
     });
     productSelected.then((res) => setOneProduct([res]));
@@ -35,7 +35,7 @@ const ItemDetailContainer = () => {
         Producto mágico
       </Heading>
       {oneProduct.map((product) => {
-        return <Item product={product} key={product.id} />;
+        return <Item product={product} key={product.id} showContent={true} />;
       })}
     </Box>
   );

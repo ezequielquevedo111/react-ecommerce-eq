@@ -21,7 +21,9 @@ const ItemList = ({ greeting, products }) => {
         paddingTop={"100px"}
       >
         {products.map((product) => {
-          return <Item product={product} key={product.id} />;
+          return (
+            <Item product={product} key={product.id} showContent={false} />
+          );
         })}
       </Grid>
     </Flex>

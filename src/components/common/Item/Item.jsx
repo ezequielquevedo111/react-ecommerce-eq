@@ -5,12 +5,12 @@ import {
   Image,
   Stack,
   Heading,
-  Button,
   ButtonGroup,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import CounterContainer from "../counter/CounterContainer";
 
-const Item = ({ product }) => {
+const Item = ({ product, showContent }) => {
   return (
     <Card
       maxW="sm"
@@ -49,8 +49,13 @@ const Item = ({ product }) => {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Link to={`/itemDetail/${product.id}`}>Ver más</Link>
+          {!showContent ? (
+            <Link to={`/itemDetail/${product.id}`}>Ver más</Link>
+          ) : (
+            <Link>Agregar al carrito</Link>
+          )}
         </ButtonGroup>
+        <CounterContainer />
       </CardFooter>
     </Card>
   );

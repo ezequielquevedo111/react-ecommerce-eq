@@ -5,29 +5,19 @@ import {
   NumberInputField,
   NumberInputStepper,
 } from "@chakra-ui/number-input";
+import { Box } from "@chakra-ui/react";
 
-const Counter = ({ contador, sumar, restar }) => {
+const Counter = ({ stock }) => {
   return (
-    <div>
-      <h6>{contador}</h6>
-      <button onClick={sumar}>+</button>
-      <button onClick={restar}>-</button>
-      <NumberInput size="sm" defaultValue={15} min={10}>
-        <NumberInputField focusBorderColor="red.200" />
+    <Box display={"flex"} flexDirection={"column"} marginLeft={"50px"}>
+      <NumberInput defaultValue={1} min={1} max={stock} size="sm" maxW={"100"}>
+        <NumberInputField />
         <NumberInputStepper>
-          <NumberIncrementStepper
-            bg="green.200"
-            _active={{ bg: "green.300" }}
-            children="+"
-          />
-          <NumberDecrementStepper
-            bg="pink.200"
-            _active={{ bg: "pink.300" }}
-            children="-"
-          />
+          <NumberIncrementStepper />
+          <NumberDecrementStepper />
         </NumberInputStepper>
       </NumberInput>
-    </div>
+    </Box>
   );
 };
 
