@@ -10,9 +10,9 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import CounterContainer from "../counter/CounterContainer";
+import CounterContainer from "../../common/counter/CounterContainer";
 
-const Item = ({ product, showContent }) => {
+const ItemDetail = ({ product, showContent }) => {
   return (
     <Card
       backgroundColor={"#f2e8d8"}
@@ -84,4 +84,4 @@ const Item = ({ product, showContent }) => {
   );
 };
 
-export default Item;
+export default ItemDetail;

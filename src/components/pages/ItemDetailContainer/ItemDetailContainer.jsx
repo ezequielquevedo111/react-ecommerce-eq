@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { productosMagicos } from "../../../productsMock";
-import Item from "../../common/Item/Item";
+import ItemDetail from "../ItemDetailContainer/ItemDetail";
 import { useParams } from "react-router-dom";
 import { Box, Heading } from "@chakra-ui/react";
 
@@ -25,6 +25,7 @@ const ItemDetailContainer = () => {
       backgroundColor={"#0e1428"}
       justifyItems="center"
       alignItems="center"
+      p="20px"
     >
       <Heading
         fontFamily={"Playfair Display SC"}
@@ -35,7 +36,9 @@ const ItemDetailContainer = () => {
         Producto mágico
       </Heading>
       {oneProduct.map((product) => {
-        return <Item product={product} key={product.id} showContent={true} />;
+        return (
+          <ItemDetail product={product} key={product.id} showContent={true} />
+        );
       })}
     </Box>
   );

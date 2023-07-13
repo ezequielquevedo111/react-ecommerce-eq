@@ -3,6 +3,7 @@ import CartWidget from "../../common/CartWidget/cartWidget/CartWidget";
 import styles from "./NavBar.module.css";
 import { Breadcrumb, BreadcrumbItem, Grid, GridItem } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import Logo from "../../common/Logo/Logo";
 
 function NavBar() {
   return (
@@ -13,14 +14,11 @@ function NavBar() {
       justifyItems={"center"}
       backgroundColor={"#0e1428"}
       color={"#c68e01"}
+      p="10px"
     >
       <GridItem>
         <Link to="/">
-          <Image
-            className={styles.logo}
-            alt=""
-            src="https://res.cloudinary.com/dzzp3rans/image/upload/v1688335019/LOGOTIPO_xquq7p.png"
-          />{" "}
+          <Logo />
         </Link>
       </GridItem>
 
