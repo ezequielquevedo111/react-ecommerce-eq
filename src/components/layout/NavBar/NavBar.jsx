@@ -1,4 +1,4 @@
-import { BreadcrumbLink, Image } from "@chakra-ui/react";
+import { Box, BreadcrumbLink, Image, SimpleGrid } from "@chakra-ui/react";
 import CartWidget from "../../common/CartWidget/cartWidget/CartWidget";
 import styles from "./NavBar.module.css";
 import { Breadcrumb, BreadcrumbItem, Grid, GridItem } from "@chakra-ui/react";
@@ -16,11 +16,13 @@ function NavBar() {
       color={"#c68e01"}
       p="10px"
     >
-      <GridItem>
-        <Link to="/">
-          <Logo />
-        </Link>
-      </GridItem>
+      <SimpleGrid minChildWidth="200px">
+        <Box>
+          <Link to="/">
+            <Logo />
+          </Link>
+        </Box>
+      </SimpleGrid>
 
       <GridItem paddingRight={"50px"}>
         <Breadcrumb separator=" " fontSize={"20px"}>

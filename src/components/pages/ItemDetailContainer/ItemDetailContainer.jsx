@@ -22,6 +22,7 @@ const ItemDetailContainer = () => {
       display="flex"
       flexDirection="column"
       w="100%"
+      h="800px"
       backgroundColor={"#0e1428"}
       justifyItems="center"
       alignItems="center"

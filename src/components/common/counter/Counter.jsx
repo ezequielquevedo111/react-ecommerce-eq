@@ -9,7 +9,7 @@ import { Box } from "@chakra-ui/react";
 
 const Counter = ({ stock }) => {
   return (
-    <Box display={"flex"} flexDirection={"column"} marginLeft={"50px"}>
+    <Box display={"flex"} alignItems="center" justifyContent="center">
       <NumberInput
         defaultValue={1}
         min={1}

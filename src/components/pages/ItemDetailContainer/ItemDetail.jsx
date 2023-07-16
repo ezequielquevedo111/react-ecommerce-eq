@@ -8,6 +8,7 @@ import {
   ButtonGroup,
   Text,
   Box,
+  Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import CounterContainer from "../../common/counter/CounterContainer";
@@ -18,19 +19,22 @@ const ItemDetail = ({ product, showContent }) => {
       backgroundColor={"#f2e8d8"}
       color={"#333333"}
       size="md"
-      maxW="lg"
+      maxW="400px"
+      maxH="500px"
       display={"flex"}
     >
       <CardBody>
-        <Image
-          src={product.img}
-          alt="Green double couch with wooden legs"
-          borderRadius="lg"
-          margin={"auto"}
-          objectFit={"contain"}
-          height={"200px"}
-          width={"200px"}
-        />
+        <Stack align="center">
+          <Image
+            boxSize="350px"
+            src={product.img}
+            alt={product.title}
+            objectFit="contain"
+            height={"200px"}
+            width={"150px"}
+          />
+        </Stack>
+
         <Stack mt="6" spacing="3">
           <Heading size="md" fontFamily={"Harry Potter"}>
             {product.title}
@@ -57,24 +61,26 @@ const ItemDetail = ({ product, showContent }) => {
           backgroundColor={"#f2e8d8"}
           borderRadius={"2px"}
           display={"flex"}
+          flexDirection={"row"}
           justifyContent={"center"}
-          alignItems={"center"}
           textAlign={"center"}
         >
           {!showContent ? (
             <Box>
-              <Link to={`/itemDetail/${product.id}`}>Ver más</Link>
+              <Button variant="solid" size="md" backgroundColor="#f2e8d8">
+                <Link to={`/itemDetail/${product.id}`}>Ver más</Link>
+              </Button>
             </Box>
           ) : (
             <Box>
-              <Link
-                height={"45px"}
-                width={"100px"}
-                margin={"auto"}
-                sx={{ height: "55px" }}
+              <Button
+                variant="solid"
+                size="md"
+                backgroundColor="#f2e8d8"
+                marginLeft={"20px"}
               >
-                Agregar al carrito
-              </Link>
+                <Link>Agregar al carrito</Link>
+              </Button>
             </Box>
           )}
         </ButtonGroup>
