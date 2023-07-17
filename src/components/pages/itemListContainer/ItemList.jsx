@@ -1,9 +1,26 @@
 import ItemDetail from "../ItemDetailContainer/ItemDetail";
-import { Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 
 const ItemList = ({ greeting, products, category }) => {
   return (
     <Container maxW="container.2xl" p="0">
+      {category === undefined && (
+        <SimpleGrid columns={2} backgroundColor={"#0e1428"}>
+          <Box
+            display={"flex"}
+            w="100%"
+            h={"900px"}
+            textAlign={"end"}
+            alignItems={"center"}
+            color={"#c68e01"}
+            justifyContent={"center"}
+          >
+            <Heading fontSize={"8xl"} fontWeight={"900"}>
+              LOS PRODUCTOS MÁGICOS QUE TANTO DESEAS
+            </Heading>
+          </Box>
+        </SimpleGrid>
+      )}
       <Flex
         flexDirection="column"
         textAlign="center"
@@ -14,10 +31,10 @@ const ItemList = ({ greeting, products, category }) => {
         <Heading
           fontSize="5xl"
           color={"#c68e01"}
-          fontFamily={"Playfair Display SC"}
+          fontFamily={"Inter Tight"}
           paddingBottom="20"
         >
-          {!category ? greeting : category}
+          {!category ? greeting : category.toUpperCase()}
         </Heading>
         <SimpleGrid minChildWidth="300px" spacing={6}>
           {products.map((product) => {

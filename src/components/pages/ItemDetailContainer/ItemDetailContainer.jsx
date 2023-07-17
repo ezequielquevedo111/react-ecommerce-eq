@@ -26,15 +26,15 @@ const ItemDetailContainer = () => {
       backgroundColor={"#0e1428"}
       justifyItems="center"
       alignItems="center"
-      p="20px"
+      paddingTop="80px"
     >
       <Heading
-        fontFamily={"Playfair Display SC"}
+        fontFamily={"Inter Tight"}
         color={"#c68e01"}
         size="2xl"
         paddingBottom={"70px"}
       >
-        Producto mágico
+        PRODUCTO MÁGICO
       </Heading>
       {oneProduct.map((product) => {
         return (

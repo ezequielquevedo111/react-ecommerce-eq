@@ -11,11 +11,7 @@ const AppRouter = () => {
       <Route element={<Layout />}>
         <Route
           path="/"
-          element={
-            <ItemListContainer
-              greeting={"Los productos mágicos que tanto deseas"}
-            />
-          }
+          element={<ItemListContainer greeting={"Productos mágicos"} />}
         />
         <Route
           path="/categoryProduct/:category"

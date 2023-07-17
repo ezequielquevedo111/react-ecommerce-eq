@@ -27,23 +27,39 @@ function NavBar() {
       <GridItem paddingRight={"50px"}>
         <Breadcrumb separator=" " fontSize={"20px"}>
           <BreadcrumbItem>
-            <BreadcrumbLink as={Link} to="/categoryProduct/varitas">
-              Varitas
+            <BreadcrumbLink
+              as={Link}
+              to="/categoryProduct/varitas"
+              textDecoration={"none"}
+            >
+              VARITAS
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <BreadcrumbLink as={Link} to="/categoryProduct/pociones">
-              Pociones
+            <BreadcrumbLink
+              as={Link}
+              to="/categoryProduct/pociones"
+              textDecoration={"none"}
+            >
+              POCIONES
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <BreadcrumbLink as={Link} to="/categoryProduct/ingredientes">
-              Ingredientes
+            <BreadcrumbLink
+              as={Link}
+              to="/categoryProduct/ingredientes"
+              textDecoration={"none"}
+            >
+              INGREDIENTES
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <BreadcrumbLink as={Link} to="/categoryProduct/horrocruxes">
-              Horrocruxes
+            <BreadcrumbLink
+              as={Link}
+              to="/categoryProduct/horrocruxes"
+              textDecoration={"none"}
+            >
+              HORROCRUXES
             </BreadcrumbLink>
           </BreadcrumbItem>
           <CartWidget />
