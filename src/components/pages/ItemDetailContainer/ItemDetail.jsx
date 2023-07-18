@@ -16,8 +16,10 @@ import CounterContainer from "../../common/counter/CounterContainer";
 const ItemDetail = ({ product, showContent }) => {
   return (
     <Card
-      backgroundColor={"#f2e8d8"}
-      color={"#333333"}
+      // backgroundColor={"#f2e8d8"}
+      backgroundColor={"#071028"}
+      // color={"#333333"}
+      color={"#c68e01"}
       size="md"
       maxW="400px"
       maxH="500px"
@@ -49,7 +51,8 @@ const ItemDetail = ({ product, showContent }) => {
         </Stack>
       </CardBody>
       <CardFooter
-        backgroundColor={"#73877B"}
+        // backgroundColor={"#73877B"}
+        backgroundColor={"#ff9900"}
         borderRadius="sm"
         justify="space-around"
       >
@@ -58,7 +61,7 @@ const ItemDetail = ({ product, showContent }) => {
           height={"40px"}
           width={"100px"}
           fontSize={"12px"}
-          backgroundColor={"#f2e8d8"}
+          // backgroundColor={"#f2e8d8"}
           borderRadius={"2px"}
           display={"flex"}
           flexDirection={"row"}
@@ -67,7 +70,12 @@ const ItemDetail = ({ product, showContent }) => {
         >
           {!showContent ? (
             <Box>
-              <Button variant="solid" size="md" backgroundColor="#f2e8d8">
+              <Button
+                variant="solid"
+                size="md"
+                backgroundColor="#071028"
+                color="#ff9900"
+              >
                 <Link to={`/itemDetail/${product.id}`}>Ver más</Link>
               </Button>
             </Box>
@@ -76,8 +84,9 @@ const ItemDetail = ({ product, showContent }) => {
               <Button
                 variant="solid"
                 size="md"
-                backgroundColor="#f2e8d8"
+                backgroundColor="#071028"
                 marginLeft={"20px"}
+                color="#ff9900"
               >
                 <Link>Agregar al carrito</Link>
               </Button>

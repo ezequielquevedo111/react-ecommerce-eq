@@ -16,12 +16,20 @@ const Counter = ({ stock }) => {
         max={stock}
         size="sm"
         maxW={"100"}
-        backgroundColor={"#f2e8d8"}
+        backgroundColor={"#071028"}
+        color={"#ff9900"}
+        borderColor={"#ff9900"}
       >
         <NumberInputField />
         <NumberInputStepper>
-          <NumberIncrementStepper />
-          <NumberDecrementStepper />
+          <NumberIncrementStepper
+            backgroundColor={"#071028"}
+            color={"#ff9900"}
+          />
+          <NumberDecrementStepper
+            backgroundColor={"#071028"}
+            color={"#ff9900"}
+          />
         </NumberInputStepper>
       </NumberInput>
     </Box>
