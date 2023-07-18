@@ -10,15 +10,14 @@ import {
   Box,
   Button,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+
 import CounterContainer from "../../common/counter/CounterContainer";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ product, showContent }) => {
   return (
     <Card
-      // backgroundColor={"#f2e8d8"}
       backgroundColor={"#071028"}
-      // color={"#333333"}
       color={"#c68e01"}
       size="md"
       maxW="400px"
@@ -52,7 +51,6 @@ const ItemDetail = ({ product, showContent }) => {
         </Stack>
       </CardBody>
       <CardFooter
-        // backgroundColor={"#73877B"}
         backgroundColor={"#ff9900"}
         borderRadius="sm"
         justify="space-around"
@@ -62,7 +60,6 @@ const ItemDetail = ({ product, showContent }) => {
           height={"40px"}
           width={"100px"}
           fontSize={"12px"}
-          // backgroundColor={"#f2e8d8"}
           borderRadius={"2px"}
           display={"flex"}
           flexDirection={"row"}
@@ -76,8 +73,10 @@ const ItemDetail = ({ product, showContent }) => {
                 size="md"
                 backgroundColor="#071028"
                 color="#ff9900"
+                as={Link}
+                to={`/itemDetail/${product.id}`}
               >
-                <Link to={`/itemDetail/${product.id}`}>Ver más</Link>
+                Ver más
               </Button>
             </Box>
           ) : (
@@ -88,8 +87,9 @@ const ItemDetail = ({ product, showContent }) => {
                 backgroundColor="#071028"
                 marginLeft={"20px"}
                 color="#ff9900"
+                as={Link}
               >
-                <Link>Agregar al carrito</Link>
+                Agregar al carrito
               </Button>
             </Box>
           )}
