@@ -1,22 +1,23 @@
 import { Box, BreadcrumbLink, Image, SimpleGrid } from "@chakra-ui/react";
 import CartWidget from "../../common/CartWidget/cartWidget/CartWidget";
 import styles from "./NavBar.module.css";
-import { Breadcrumb, BreadcrumbItem, Grid, GridItem } from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, GridItem } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Logo from "../../common/Logo/Logo";
 
 function NavBar() {
   return (
-    <Grid
-      templateColumns="0.7fr 1fr"
-      templateRows="1fr"
-      alignItems={"center"}
+    <SimpleGrid
+      // templateColumns="0.7fr 1fr"
+      // templateRows="1fr"
+      // alignItems={"center"}
+      // justifyItems={"center"}
+      columns={2}
       justifyItems={"center"}
       backgroundColor={"#0e1428"}
       color={"#c68e01"}
-      p="10px"
     >
-      <SimpleGrid minChildWidth="200px">
+      <SimpleGrid maxW={["50px", "100px", "200px"]}>
         <Box>
           <Link to="/">
             <Logo />
@@ -24,8 +25,12 @@ function NavBar() {
         </Box>
       </SimpleGrid>
 
-      <GridItem paddingRight={"50px"}>
-        <Breadcrumb separator=" " fontSize={"20px"}>
+      <GridItem
+        p={[5, 10]}
+        display={"flex"}
+        flexDirection={["column", "column", "row"]}
+      >
+        <Breadcrumb separator=" " fontSize={["sm", "md", "xl"]}>
           <BreadcrumbItem>
             <BreadcrumbLink
               as={Link}
@@ -65,7 +70,7 @@ function NavBar() {
           <CartWidget />
         </Breadcrumb>
       </GridItem>
-    </Grid>
+    </SimpleGrid>
   );
 }
 

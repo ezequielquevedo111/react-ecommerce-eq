@@ -1,30 +1,23 @@
-import {
-  Container,
-  Flex,
-  FormControl,
-  FormLabel,
-  GridItem,
-  Heading,
-  Input,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 import DetailForm from "./DetailForm/DetailForm";
 import TotalCardForm from "./TotalCardForm/TotalCardForm";
 
 const Checkout = () => {
   return (
-    <Container maxW={"1980px"} backgroundColor={"#0e1428"} py={40}>
+    <Container maxW="full" backgroundColor={"#0e1428"} py={[5, 20, 40]}>
       <Container
-        maxW="container.xl"
-        maxH="container.xl"
-        p={10}
+        maxW={["400px", "600px", "1280px"]}
+        maxH={["360px", "400px", "1000px"]}
+        p={[0, 5, 10]}
         backgroundColor={"#071028"}
         color={"#c68e01"}
         borderRadius="md"
       >
-        <Flex h="100vh" py={20}>
+        <Flex
+          h={{ base: "400px", md: "400px", lg: "900px" }}
+          py={[0, 10, 20]}
+          flexDirection={{ base: "column-reverse", md: "row" }}
+        >
           <DetailForm />
           <TotalCardForm />
         </Flex>
