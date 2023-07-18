@@ -24,6 +24,7 @@ const ItemDetail = ({ product, showContent }) => {
       maxW="400px"
       maxH="500px"
       display={"flex"}
+      boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
     >
       <CardBody>
         <Stack align="center">
