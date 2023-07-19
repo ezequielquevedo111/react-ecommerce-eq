@@ -27,8 +27,8 @@ function NavBar() {
 
       <GridItem
         p={[5, 10]}
-        display={"flex"}
-        flexDirection={["column", "column", "row"]}
+        // display={"flex"}
+        // flexDirection={["column", "column"]}
       >
         <Breadcrumb separator=" " fontSize={["sm", "md", "xl"]}>
           <BreadcrumbItem>

@@ -5,7 +5,7 @@ const ItemList = ({ greeting, products, category }) => {
   return (
     <Container maxW="container.2xl" p="0">
       {category === undefined && (
-        <SimpleGrid columns={2} backgroundColor={"#0e1428"}>
+        <SimpleGrid columns={[1, 2]} backgroundColor={"#0e1428"} p={5}>
           <Box
             display={"flex"}
             w="100%"

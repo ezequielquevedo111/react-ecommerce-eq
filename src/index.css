@@ -6,3 +6,14 @@
   box-sizing: border-box;
   font-family: "Inter Tight", sans-serif;
 }
+
+* ::-webkit-scrollbar {
+  background-color: #16213d;
+  scroll-behavior: smooth;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background-color: #c68e01;
+  height: 50px;
+  border-radius: 2.5px;
+}
