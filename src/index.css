@@ -8,12 +8,12 @@
 }
 
 * ::-webkit-scrollbar {
-  background-color: #16213d;
+  background-color: #0e1428;
   scroll-behavior: smooth;
 }
 
 * ::-webkit-scrollbar-thumb {
   background-color: #c68e01;
   height: 50px;
-  border-radius: 2.5px;
+  border-radius: 20px;
 }
