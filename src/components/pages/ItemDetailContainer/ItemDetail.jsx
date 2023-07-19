@@ -43,7 +43,10 @@ const ItemDetail = ({ product, showContent }) => {
           </Heading>
           {showContent ? (
             <Box>
-              <Text fontSize="sm">{product.description}</Text>
+              <Heading size="sm">${product.price}</Heading>
+              <Text fontSize="sm" py={"5px"}>
+                {product.description}
+              </Text>
             </Box>
           ) : (
             <></>
