@@ -2,7 +2,7 @@ import { Container, Flex } from "@chakra-ui/react";
 import DetailForm from "./DetailForm/DetailForm";
 import TotalCardForm from "./TotalCardForm/TotalCardForm";
 
-const Checkout = () => {
+const Checkout = ({ handleChange, dataForm, handleSubmit }) => {
   return (
     <Container maxW="full" backgroundColor={"#0e1428"} py={[5, 20, 40]}>
       <Container
@@ -18,7 +18,11 @@ const Checkout = () => {
           py={[0, 10, 20]}
           flexDirection={{ base: "column-reverse", md: "row" }}
         >
-          <DetailForm />
+          <DetailForm
+            handleChange={handleChange}
+            dataForm={dataForm}
+            handleSubmit={handleSubmit}
+          />
           <TotalCardForm />
         </Flex>
       </Container>

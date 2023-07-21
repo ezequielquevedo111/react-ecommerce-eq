@@ -12,7 +12,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-const DetailForm = () => {
+const DetailForm = ({ handleChange, dataForm, handleSubmit }) => {
+  console.log(dataForm);
   return (
     <VStack
       w="full"
@@ -28,41 +29,49 @@ const DetailForm = () => {
         </Text>
       </VStack>
       <SimpleGrid columns={[1, 2]} columnGap={3} rowGap={6} w="full">
-        <GridItem colSpan={2}>
+        <GridItem colSpan={2} onSubmit={handleSubmit}>
           <FormControl>
             <FormLabel>Nombre</FormLabel>
-            <Input placeholder="Ezequiel" />
+            <Input placeholder="Ezequiel" name="name" onChange={handleChange} />
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
           <FormControl>
             <FormLabel>Apellido</FormLabel>
-            <Input placeholder="Quevedo" />
+            <Input
+              placeholder="Quevedo"
+              name="lastname"
+              onChange={handleChange}
+            />
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
           <FormControl>
             <FormLabel>Telefono</FormLabel>
-            <Input placeholder="Telefono" />
+            <Input
+              placeholder="Telefono"
+              name="phone"
+              onChange={handleChange}
+            />
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
           <FormControl>
             <FormLabel>Email</FormLabel>
-            <Input placeholder="ezequielquevedo111@gmail.com" />
+            <Input placeholder="ezequielquevedo111@gmail.com" name="email" />
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
           <FormControl>
             <FormLabel>Repite tu email</FormLabel>
-            <Input placeholder="ezequielquevedo111@gmail.com" />
+            <Input placeholder="ezequielquevedo111@gmail.com" name="email" />
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
           <Checkbox defaultChecked>Acepto las condiciones</Checkbox>
         </GridItem>
         <GridItem colSpan={2}>
-          <Button size="lg" w="full" backgroundColor={"#ffffff"}>
+          <Button size="lg" w="full" backgroundColor={"#ffffff"} type="submit">
             Finalizar compra
           </Button>
         </GridItem>

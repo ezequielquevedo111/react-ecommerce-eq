@@ -2,7 +2,7 @@ import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { productosMagicos } from "../../../productsMock";
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = ({ greeting = "PRODUCTOS MÁGICOS" }) => {
   const [saveProducts, setSaveProducts] = useState([]);
 
   const { category } = useParams();

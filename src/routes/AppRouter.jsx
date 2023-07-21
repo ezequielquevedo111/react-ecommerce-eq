@@ -4,23 +4,15 @@ import ItemDetailContainer from "../components/pages/ItemDetailContainer/ItemDet
 import Layout from "../components/layout/Layout";
 import CheckoutContainer from "../components/pages/Checkout/CheckoutContainer";
 import CartContainer from "../components/pages/Cart/CartContainer";
+import { simpleRoutes } from "./simpleRoutes";
 
 const AppRouter = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route
-          path="/"
-          element={<ItemListContainer greeting={"Productos mágicos"} />}
-        />
-        <Route
-          path="/categoryProduct/:category"
-          element={<ItemListContainer />}
-        />
-        <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-
-        <Route path="/cart" element={<CartContainer />} />
-        <Route path="/checkout" element={<CheckoutContainer />} />
+        {simpleRoutes.map(({ id, path, Element }) => (
+          <Route key={id} path={path} element={<Element />} />
+        ))}
       </Route>
       <Route path="*" element={<h1>404 not found</h1>} />
     </Routes>
