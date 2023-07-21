@@ -1,6 +1,5 @@
 import { Box, BreadcrumbLink, Image, SimpleGrid } from "@chakra-ui/react";
 import CartWidget from "../../common/CartWidget/cartWidget/CartWidget";
-import styles from "./NavBar.module.css";
 import { Breadcrumb, BreadcrumbItem, GridItem } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Logo from "../../common/Logo/Logo";

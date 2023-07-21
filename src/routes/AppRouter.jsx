@@ -1,9 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import ItemListContainer from "../components/pages/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "../components/pages/ItemDetailContainer/ItemDetailContainer";
 import Layout from "../components/layout/Layout";
-import CheckoutContainer from "../components/pages/Checkout/CheckoutContainer";
-import CartContainer from "../components/pages/Cart/CartContainer";
 import { simpleRoutes } from "./simpleRoutes";
 
 const AppRouter = () => {

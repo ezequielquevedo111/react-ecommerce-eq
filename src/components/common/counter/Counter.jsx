@@ -5,17 +5,31 @@ import {
   NumberInputField,
   NumberInputStepper,
 } from "@chakra-ui/number-input";
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-const Counter = ({ stock }) => {
+const Counter = ({ stock, add, subtract, counterCount, addProduct }) => {
+  console.log(counterCount);
   return (
     <Box display={"flex"} alignItems="center" justifyContent="center">
+      <Box paddingRight={"20px"}>
+        <Button
+          variant="solid"
+          size="md"
+          backgroundColor="#071028"
+          color="#ff9900"
+          as={Link}
+          onClick={() => addProduct(counterCount)}
+        >
+          Agregar al carrito
+        </Button>
+      </Box>
       <NumberInput
-        defaultValue={1}
-        min={1}
+        defaultValue={counterCount}
+        min={counterCount}
         max={stock}
         size="sm"
-        maxW={"100"}
+        w={"100px"}
         backgroundColor={"#071028"}
         color={"#ff9900"}
         borderColor={"#ff9900"}
@@ -25,10 +39,12 @@ const Counter = ({ stock }) => {
           <NumberIncrementStepper
             backgroundColor={"#071028"}
             color={"#ff9900"}
+            onClick={add}
           />
           <NumberDecrementStepper
             backgroundColor={"#071028"}
             color={"#ff9900"}
+            onClick={subtract}
           />
         </NumberInputStepper>
       </NumberInput>

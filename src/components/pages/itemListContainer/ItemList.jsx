@@ -1,4 +1,5 @@
-import ItemDetail from "../ItemDetailContainer/ItemDetail";
+import CardProduct from "../../common/CardProduct/CardProduct";
+
 import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 
 const ItemList = ({ greeting, products, category }) => {
@@ -39,7 +40,7 @@ const ItemList = ({ greeting, products, category }) => {
         <SimpleGrid minChildWidth="300px" spacing={6}>
           {products.map((product) => {
             return (
-              <ItemDetail
+              <CardProduct
                 product={product}
                 key={product.id}
                 showContent={false}
