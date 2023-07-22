@@ -11,12 +11,11 @@ const CheckoutContainer = () => {
   });
   const handleChange = (event) => {
     setDataForm({ ...dataForm, [event.target.name]: event.target.value });
-    console.log(dataForm);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
   };
-  console.table(dataForm);
+
   return (
     <Checkout
       handleChange={handleChange}

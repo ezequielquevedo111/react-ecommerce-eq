@@ -13,7 +13,6 @@ import {
 import React from "react";
 
 const DetailForm = ({ handleChange, dataForm, handleSubmit }) => {
-  console.log(dataForm);
   return (
     <VStack
       w="full"

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { CartGlobalContext } from "../../../../context/CartGlobalContext";
 const CartWidget = () => {
   const { cartProduct } = useContext(CartGlobalContext);
-  console.log(cartProduct);
   return (
     <Box
       display={"flex"}
