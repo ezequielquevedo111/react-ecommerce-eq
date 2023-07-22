@@ -9,7 +9,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-const TotalCardForm = () => {
+const TotalCardForm = ({ product }) => {
   return (
     <VStack
       w="full"
@@ -25,11 +25,7 @@ const TotalCardForm = () => {
       </VStack>
       <HStack spacing={8}>
         <AspectRatio w="80px" ratio={1}>
-          <Image
-            src="https://res.cloudinary.com/dzzp3rans/image/upload/v1687817602/varita-de-sauco.png"
-            alt="varita de sauco"
-            objectFit="cover"
-          />
+          <Image src={product.img} alt="varita de sauco" objectFit="cover" />
         </AspectRatio>
         <Stack
           spacing={3}
@@ -39,7 +35,7 @@ const TotalCardForm = () => {
           alignItems="center"
         >
           <VStack alignItems="flex-start">
-            <Heading size="md">Varita de Sauco</Heading>
+            <Heading size="md">{product.title}</Heading>
           </VStack>
           <Heading size="sm" textAlign="end">
             $50.000

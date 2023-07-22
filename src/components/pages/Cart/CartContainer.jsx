@@ -5,8 +5,13 @@ import { CartGlobalContext } from "../../../context/CartGlobalContext";
 
 const CartContainer = () => {
   const { cartProduct } = useContext(CartGlobalContext);
-  console.log(cartProduct);
-  return <Cart />;
+  return (
+    <>
+      {cartProduct.map((product) => {
+        return <Cart key={product.id} product={product} />;
+      })}
+    </>
+  );
 };
 
 export default CartContainer;

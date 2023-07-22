@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { productosMagicos } from "../../../productsMock";
 import ItemDetail from "../ItemDetailContainer/ItemDetail";
 import { useParams } from "react-router-dom";
-import { Box, Heading } from "@chakra-ui/react";
+import { CartGlobalContext } from "../../../context/CartGlobalContext";
 
 const ItemDetailContainer = () => {
   const [oneProduct, setOneProduct] = useState({});
   const { id } = useParams();
+  const { addProductCart } = useContext(CartGlobalContext);
+
   useEffect(() => {
     let productFound = productosMagicos.find(
       (product) => product.id === Number(id)
@@ -17,9 +19,14 @@ const ItemDetailContainer = () => {
     productSelected.then((res) => setOneProduct(res));
   }, [id]);
 
+  const addProduct = (cantidad) => {
+    let productSavedCart = { ...oneProduct, quantity: cantidad };
+    addProductCart(productSavedCart);
+  };
+
   return (
     <>
-      <ItemDetail oneProduct={oneProduct} />
+      <ItemDetail oneProduct={oneProduct} addProduct={addProduct} />
     </>
   );
 };

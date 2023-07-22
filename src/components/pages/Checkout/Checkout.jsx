@@ -2,7 +2,7 @@ import { Container, Flex } from "@chakra-ui/react";
 import DetailForm from "./DetailForm/DetailForm";
 import TotalCardForm from "./TotalCardForm/TotalCardForm";
 
-const Checkout = ({ handleChange, dataForm, handleSubmit }) => {
+const Checkout = ({ handleChange, dataForm, handleSubmit, cartProduct }) => {
   return (
     <Container maxW="full" backgroundColor={"#0e1428"} py={[5, 20, 40]}>
       <Container
@@ -23,7 +23,9 @@ const Checkout = ({ handleChange, dataForm, handleSubmit }) => {
             dataForm={dataForm}
             handleSubmit={handleSubmit}
           />
-          <TotalCardForm />
+          {cartProduct.map((product) => {
+            return <TotalCardForm key={product.id} product={product} />;
+          })}
         </Flex>
       </Container>
     </Container>

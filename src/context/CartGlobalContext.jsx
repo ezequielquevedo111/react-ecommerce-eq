@@ -4,8 +4,9 @@ export const CartGlobalContext = createContext();
 
 const CartGlobalContextProvider = ({ children }) => {
   const [cartProduct, setCartProduct] = useState([]);
-  const addProductCart = (product) => {
-    console.log(product);
+  const addProductCart = (item) => {
+    console.log(item);
+    setCartProduct([item]);
   };
   const deleteProductCart = () => {};
 

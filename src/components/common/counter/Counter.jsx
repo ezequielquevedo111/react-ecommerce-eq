@@ -6,10 +6,8 @@ import {
   NumberInputStepper,
 } from "@chakra-ui/number-input";
 import { Box, Button } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 
-const Counter = ({ stock, add, subtract, counterCount, addProduct }) => {
-  console.log(counterCount);
+const Counter = ({ stock, add, subtract, addProduct, counterCount }) => {
   return (
     <Box display={"flex"} alignItems="center" justifyContent="center">
       <Box paddingRight={"20px"}>
@@ -18,7 +16,6 @@ const Counter = ({ stock, add, subtract, counterCount, addProduct }) => {
           size="md"
           backgroundColor="#071028"
           color="#ff9900"
-          as={Link}
           onClick={() => addProduct(counterCount)}
         >
           Agregar al carrito

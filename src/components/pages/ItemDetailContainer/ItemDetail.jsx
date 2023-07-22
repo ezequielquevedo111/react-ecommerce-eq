@@ -12,7 +12,7 @@ import {
 
 import CounterContainer from "../../common/counter/CounterContainer";
 
-const ItemDetail = ({ oneProduct }) => {
+const ItemDetail = ({ oneProduct, addProduct }) => {
   return (
     <Box
       display="flex"
@@ -82,7 +82,10 @@ const ItemDetail = ({ oneProduct }) => {
             textAlign={"center"}
           >
             <Box>
-              <CounterContainer stock={oneProduct.stock} />
+              <CounterContainer
+                stock={oneProduct.stock}
+                addProduct={addProduct}
+              />
             </Box>
           </ButtonGroup>
         </CardFooter>

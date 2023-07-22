@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-const Cart = () => {
+const Cart = ({ product }) => {
   return (
     <Container maxW="full" h="container.lg" backgroundColor={"#0e1428"}>
       <Flex direction="column" align="center">
@@ -22,17 +22,17 @@ const Cart = () => {
         </VStack>
         <VStack
           backgroundColor={"#16213d"}
-          w="2xl"
+          w="4xl"
           h="xs"
           color={"#c68e01"}
           alignItems="center"
           borderRadius="md"
-          justifyContent="space-evenly"
+          justifyContent="center"
         >
-          <HStack spacing={16}>
-            <AspectRatio w="100px" ratio={1} alignItems="flex-start">
+          <HStack spacing={10}>
+            <AspectRatio w="100px" ratio={1} justifyItems="center">
               <Image
-                src="https://res.cloudinary.com/dzzp3rans/image/upload/v1687817602/varita-de-sauco.png"
+                src={product.img}
                 alt="varita de sauco"
                 objectFit="contain"
               />
@@ -46,9 +46,9 @@ const Cart = () => {
               gap={"22px"}
             >
               <VStack>
-                <Heading size="md">Varita de Sauco</Heading>
+                <Heading size="md">{product.title}</Heading>
               </VStack>
-              <Heading size="sm">Cantidad: 4</Heading>
+              <Heading size="sm">Cantidad: {product.quantity}</Heading>
               <Heading size="sm" textAlign="end">
                 $50.000
               </Heading>

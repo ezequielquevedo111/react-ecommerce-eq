@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Checkout from "../Checkout/Checkout";
+import { CartGlobalContext } from "../../../context/CartGlobalContext";
 
 const CheckoutContainer = () => {
+  const { cartProduct } = useContext(CartGlobalContext);
   const [dataForm, setDataForm] = useState({
     name: "",
     lastname: "",
@@ -20,6 +22,7 @@ const CheckoutContainer = () => {
       handleChange={handleChange}
       dataForm={dataForm}
       handleSubmit={handleSubmit}
+      cartProduct={cartProduct}
     />
   );
 };
