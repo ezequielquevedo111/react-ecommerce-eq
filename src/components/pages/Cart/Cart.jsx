@@ -12,10 +12,10 @@ import SimpleCart from "./SimpleCart";
 const Cart = ({ cartProduct, deleteProductCart }) => {
   return (
     <Container maxW="full" h="container.lg" backgroundColor={"#0e1428"}>
-      <Flex direction="column" alignContent="center" justifyContent="center">
+      <Flex direction="column" alignItems="center">
         <VStack>
           {cartProduct.length > 0 ? (
-            <Heading py={10} color={"#c68e01"} size="2xl">
+            <Heading py="16" color={"#c68e01"} size="2xl">
               PRODUCTOS AGREGADOS
             </Heading>
           ) : (
@@ -34,6 +34,7 @@ const Cart = ({ cartProduct, deleteProductCart }) => {
             alignItems="center"
             borderRadius="md"
             justifyContent="center"
+            py="8"
           >
             {cartProduct.map((product) => {
               return (
@@ -44,7 +45,7 @@ const Cart = ({ cartProduct, deleteProductCart }) => {
                 />
               );
             })}
-            <VStack h="100px" w="full" justifyContent={"flex-end"}>
+            <VStack h="100px" w="full" justifyContent={"flex-end"} py="5">
               <Button as={Link} to={"/checkout"}>
                 Finalizar compra
               </Button>

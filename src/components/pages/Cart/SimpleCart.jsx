@@ -10,7 +10,7 @@ import {
 
 const SimpleCart = ({ product, deleteProductCart }) => {
   return (
-    <HStack spacing={10}>
+    <HStack spacing={10} w={"800px"} h={"85px"}>
       <AspectRatio w="100px" ratio={1} justifyItems="center">
         <Image src={product.img} alt="varita de sauco" objectFit="contain" />
       </AspectRatio>

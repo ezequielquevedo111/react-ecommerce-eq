@@ -1,8 +1,16 @@
-import { Container, Flex } from "@chakra-ui/react";
+import {
+  Container,
+  Divider,
+  Flex,
+  HStack,
+  Heading,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import DetailForm from "./DetailForm/DetailForm";
 import TotalCardForm from "./TotalCardForm/TotalCardForm";
 
-const Checkout = ({ handleChange, dataForm, handleSubmit, cartProduct }) => {
+const Checkout = ({ cartProduct, handleSubmit, handleChange, errors }) => {
   return (
     <Container maxW="full" backgroundColor={"#0e1428"} py={[5, 20, 40]}>
       <Container
@@ -19,13 +27,37 @@ const Checkout = ({ handleChange, dataForm, handleSubmit, cartProduct }) => {
           flexDirection={{ base: "column-reverse", md: "row" }}
         >
           <DetailForm
-            handleChange={handleChange}
-            dataForm={dataForm}
             handleSubmit={handleSubmit}
+            handleChange={handleChange}
+            errors={errors}
           />
-          {cartProduct.map((product) => {
-            return <TotalCardForm key={product.id} product={product} />;
-          })}
+          <VStack
+            w="full"
+            h="full"
+            p={10}
+            spacing={10}
+            alignItems="space-between"
+            backgroundColor={"#16213d"}
+          >
+            <VStack alignItems="flex-start" spacing={5}>
+              <Heading size="2xl">Resumen.</Heading>
+              <Text>Aquí puedes visualizar el detalle de tu compra.</Text>
+            </VStack>
+            {cartProduct.map((product) => {
+              return <TotalCardForm key={product.id} product={product} />;
+            })}
+            <VStack spacing={4} alignItems="stretch" w="full">
+              <HStack justifyContent="space-between">
+                <Text>Subtotal</Text>
+                <Heading size="sm">$50.000</Heading>
+              </HStack>
+            </VStack>
+            <Divider />
+            <HStack justifyContent="space-between">
+              <Text>Total</Text>
+              <Heading size="lg">$50.000</Heading>
+            </HStack>
+          </VStack>
         </Flex>
       </Container>
     </Container>
