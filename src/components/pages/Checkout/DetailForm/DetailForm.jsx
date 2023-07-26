@@ -94,7 +94,6 @@ const DetailForm = ({ handleSubmit, handleChange, errors }) => {
               <FormErrorMessage>{errors.repeatEmail}</FormErrorMessage>
             </FormControl>
           </GridItem>
-
           <GridItem colSpan={2}>
             <Checkbox defaultChecked>Acepto las condiciones</Checkbox>
           </GridItem>

@@ -1,13 +1,11 @@
-import Cart from "../Cart/Cart";
 import { useContext } from "react";
 import { CartGlobalContext } from "../../../context/CartGlobalContext";
+import Cart from "./Cart";
 
 const CartContainer = () => {
   const { cartProduct, deleteProductCart } = useContext(CartGlobalContext);
   return (
-    <>
-      <Cart cartProduct={cartProduct} deleteProductCart={deleteProductCart} />;
-    </>
+    <Cart cartProduct={cartProduct} deleteProductCart={deleteProductCart} />
   );
 };
 

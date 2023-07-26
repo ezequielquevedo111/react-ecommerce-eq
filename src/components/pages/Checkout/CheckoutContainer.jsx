@@ -36,7 +36,10 @@ const CheckoutContainer = () => {
       repeatEmail: Yup.string()
         .required("Este campo es obligatorio")
         .email("Debes ingresar un correo electrónico válido")
-        .oneOf([Yup.ref("email")], "El email ingresado no coincide"),
+        .oneOf(
+          [Yup.ref("email")],
+          "El email ingresado no coincide con el anterior"
+        ),
     }),
     validateOnChange: false,
   });
