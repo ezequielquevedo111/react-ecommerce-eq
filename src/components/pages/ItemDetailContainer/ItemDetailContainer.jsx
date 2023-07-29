@@ -3,12 +3,14 @@ import { productosMagicos } from "../../../productsMock";
 import ItemDetail from "../ItemDetailContainer/ItemDetail";
 import { useParams } from "react-router-dom";
 import { CartGlobalContext } from "../../../context/CartGlobalContext";
+import { toast } from "react-hot-toast";
 
 const ItemDetailContainer = () => {
   const [oneProduct, setOneProduct] = useState({});
   const { id } = useParams();
   const { addProductCart } = useContext(CartGlobalContext);
 
+  /*ITEM DETAIL CON ESTADO GLOBAL Y EL FILTRO SEGUN EL ID*/
   useEffect(() => {
     let productFound = productosMagicos.find(
       (product) => product.id === Number(id)
@@ -22,6 +24,7 @@ const ItemDetailContainer = () => {
   const addProduct = (cantidad) => {
     let productSavedCart = { ...oneProduct, quantity: cantidad };
     addProductCart(productSavedCart);
+    toast.success("Producto añadido al carrito.");
   };
 
   return (

@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Checkout from "../Checkout/Checkout";
 import { CartGlobalContext } from "../../../context/CartGlobalContext";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const CheckoutContainer = () => {
   const { cartProduct } = useContext(CartGlobalContext);
+  const navigate = useNavigate();
+  /*GENERO LAS VALIDACIONES CON FORMIK Y YUP */
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
       name: "",
@@ -15,7 +19,33 @@ const CheckoutContainer = () => {
       repeatEmail: "",
     },
     onSubmit: (data) => {
-      console.log(data);
+      Swal.fire({
+        title: "¿Deseas confirmar tu compra?",
+        // icon: "warning",
+        // background: "#ffffff",
+        // color: "#071028",
+        background: "#071028",
+
+        color: "#c68e01",
+        showCancelButton: true,
+        confirmButtonColor: "#16213d",
+        confirmButtonText: "Aceptar",
+        cancelButtonColor: "#740001",
+        cancelButtonText: "Cancelar",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            icon: "success",
+            title: "Compra exitosa",
+            color: "#c68e01",
+            text: "Muchas gracias por tu compra",
+            background: "#071028",
+            // confirmButtonColor: "#16213d",
+            showConfirmButton: false,
+          });
+          console.log(data);
+        }
+      });
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -43,7 +73,12 @@ const CheckoutContainer = () => {
     }),
     validateOnChange: false,
   });
-  console.log(errors);
+  /*IMPIDO QUE SE RENDERICE LA PAGE DE CHECKOUT SI NO HAY NINGUN PRODUCTO AGREGADO */
+  useEffect(() => {
+    if (cartProduct.length === 0) {
+      return navigate("/");
+    }
+  }, []);
 
   return (
     <Checkout

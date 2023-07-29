@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { CartGlobalContext } from "../../../../context/CartGlobalContext";
 const CartWidget = () => {
   const { cartProduct } = useContext(CartGlobalContext);
+  /*WIDGET DEL CARRITO CON CONDICIONAL PARA QUE MUESTRE O NO LOS PRODUCTOS AGREGADOS*/
   return (
     <Box
       display={"flex"}
@@ -19,7 +20,6 @@ const CartWidget = () => {
         as={Link}
         to="/cart"
       >
-        {/*INGRESAR RUTA DEL CARRITO*/}
         {cartProduct.length > 0 && (
           <Badge
             color={"#0e1428"}

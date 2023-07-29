@@ -7,8 +7,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import DetailForm from "./DetailForm/DetailForm";
 import TotalCardForm from "./TotalCardForm/TotalCardForm";
+import DetailFormContainer from "./DetailForm/DetailFormContainer";
 
 const Checkout = ({ cartProduct, handleSubmit, handleChange, errors }) => {
   return (
@@ -26,7 +26,7 @@ const Checkout = ({ cartProduct, handleSubmit, handleChange, errors }) => {
           py={[0, 10, 20]}
           flexDirection={{ base: "column-reverse", md: "row" }}
         >
-          <DetailForm
+          <DetailFormContainer
             handleSubmit={handleSubmit}
             handleChange={handleChange}
             errors={errors}

@@ -4,9 +4,7 @@ import Counter from "./Counter";
 const CounterContainer = ({ stock, addProduct, initialValue = 1 }) => {
   const [counterCount, setCounterCount] = useState(initialValue);
   const add = () => {
-    counterCount < stock
-      ? setCounterCount(counterCount + 1)
-      : alert("maximo alcanzado");
+    counterCount < stock && setCounterCount(counterCount + 1);
   };
   const subtract = () => {
     counterCount > 1 && setCounterCount(counterCount - 1);

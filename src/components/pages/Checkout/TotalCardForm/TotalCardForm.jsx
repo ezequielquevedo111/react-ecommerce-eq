@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 const TotalCardForm = ({ product }) => {
+  /*RESUMEN DE LAS COMPRAS - BRIEF*/
   return (
     <HStack spacing={8}>
       <AspectRatio w="14" ratio={1}>

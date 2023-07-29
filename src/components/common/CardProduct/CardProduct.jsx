@@ -8,12 +8,13 @@ import {
   Heading,
   Image,
   Stack,
-  Text,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const CardProduct = ({ product }) => {
+  /*CARD DEL PRODUCTO BASE*/
   return (
     <Card
       backgroundColor={"#071028"}
@@ -59,16 +60,18 @@ const CardProduct = ({ product }) => {
           textAlign={"center"}
         >
           <Box>
-            <Button
-              variant="solid"
-              size="md"
-              backgroundColor="#071028"
-              color="#ff9900"
-              as={Link}
-              to={`/itemDetail/${product.id}`}
-            >
-              Ver más
-            </Button>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+              <Button
+                variant="solid"
+                size="md"
+                backgroundColor="#071028"
+                color="#ff9900"
+                as={Link}
+                to={`/itemDetail/${product.id}`}
+              >
+                Ver más
+              </Button>
+            </motion.div>
           </Box>
         </ButtonGroup>
       </CardFooter>

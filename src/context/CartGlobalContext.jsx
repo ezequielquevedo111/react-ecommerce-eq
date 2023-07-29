@@ -1,9 +1,10 @@
 import { useState, createContext } from "react";
-
+import { toast } from "react-hot-toast";
 export const CartGlobalContext = createContext();
 
 const CartGlobalContextProvider = ({ children }) => {
   const [cartProduct, setCartProduct] = useState([]);
+
   const addProductCart = (item) => {
     let isItSet = isItSaved(item.id);
     if (isItSet) {
@@ -22,6 +23,7 @@ const CartGlobalContextProvider = ({ children }) => {
   const deleteProductCart = (id) => {
     let newProductsCart = cartProduct.filter((product) => product.id !== id);
     setCartProduct(newProductsCart);
+    toast.success("Producto eliminado del carrito");
   };
 
   const isItSaved = (id) => {
@@ -29,7 +31,11 @@ const CartGlobalContextProvider = ({ children }) => {
     return productSaved;
   };
 
-  let data = { cartProduct, addProductCart, deleteProductCart };
+  let data = {
+    cartProduct,
+    addProductCart,
+    deleteProductCart,
+  };
   return (
     <CartGlobalContext.Provider value={data}>
       {children}

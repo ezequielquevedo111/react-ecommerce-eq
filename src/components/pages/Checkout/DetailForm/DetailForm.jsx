@@ -14,6 +14,7 @@ import {
 import React from "react";
 
 const DetailForm = ({ handleSubmit, handleChange, errors }) => {
+  /*FORM COMPLETO CON VALIDACIONES*/
   return (
     <form onSubmit={handleSubmit}>
       <VStack

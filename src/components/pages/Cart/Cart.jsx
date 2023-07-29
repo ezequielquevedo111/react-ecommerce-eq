@@ -9,25 +9,26 @@ import {
 
 import { Link } from "react-router-dom";
 import SimpleCart from "./SimpleCart";
+import { Toaster } from "react-hot-toast";
 
 const Cart = ({ cartProduct, deleteProductCart }) => {
   return (
-    <Container maxW="full" h="8xl" backgroundColor={"#0e1428"}>
+    /*PAGE DE CART CON CONDICIONAL DEPENDIENDO SI HAY ITEMS AGREGADOS O NO*/
+    <Container
+      maxW="full"
+      h={cartProduct.length > 0 ? "8xl" : "4xl"}
+      backgroundColor={"#0e1428"}
+    >
       <Flex direction="column" alignItems="center">
         <Box>
           <VStack>
-            {cartProduct.length > 0 ? (
+            {cartProduct.length > 0 && (
               <Heading py="16" color={"#c68e01"} size="2xl">
                 PRODUCTOS AGREGADOS
               </Heading>
-            ) : (
-              <Heading size="3xl" color={"#c68e01"} textAlign="center">
-                No hay ningún producto en el carrito ve al inicio para iniciar
-                tu compra
-              </Heading>
             )}
           </VStack>
-          {cartProduct.length > 0 && (
+          {cartProduct.length > 0 ? (
             <VStack
               backgroundColor={"#16213d"}
               w="7xl"
@@ -57,8 +58,26 @@ const Cart = ({ cartProduct, deleteProductCart }) => {
                 </Button>
               </VStack>
             </VStack>
+          ) : (
+            <VStack maxW="full" h="4xl" justifyContent="center">
+              <Heading size="2xl" color={"#c68e01"} textAlign={"center"}>
+                No hay ningún producto en el carrito ve al inicio para iniciar
+                tu compra
+              </Heading>
+            </VStack>
           )}
         </Box>
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            duration: 3000,
+            style: {
+              backgroundColor: "#16213d",
+              color: "#ff9900",
+              fontFamily: "Inter Tight",
+            },
+          }}
+        />
       </Flex>
     </Container>
   );

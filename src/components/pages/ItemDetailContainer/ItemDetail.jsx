@@ -11,8 +11,10 @@ import {
 } from "@chakra-ui/react";
 
 import CounterContainer from "../../common/counter/CounterContainer";
+import { Toaster } from "react-hot-toast";
 
 const ItemDetail = ({ oneProduct, addProduct }) => {
+  /*ITEM DETAIL CON CHAKRA UI*/
   return (
     <Box
       display="flex"
@@ -28,10 +30,11 @@ const ItemDetail = ({ oneProduct, addProduct }) => {
         fontFamily={"Inter Tight"}
         color={"#c68e01"}
         size="2xl"
-        paddingBottom={"70px"}
+        paddingBottom={"100px"}
       >
         PRODUCTO MÁGICO
       </Heading>
+
       <Card
         backgroundColor={"#071028"}
         color={"#c68e01"}
@@ -59,6 +62,10 @@ const ItemDetail = ({ oneProduct, addProduct }) => {
             </Heading>
             <Box>
               <Heading size="sm">${oneProduct.price}</Heading>
+              <Text fontSize="sm" py={"10px"}>
+                Stock:
+                {oneProduct.stock}
+              </Text>
               <Text fontSize="sm" py={"5px"}>
                 {oneProduct.description}
               </Text>
@@ -90,6 +97,17 @@ const ItemDetail = ({ oneProduct, addProduct }) => {
           </ButtonGroup>
         </CardFooter>
       </Card>
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          duration: 3000,
+          style: {
+            backgroundColor: "#16213d",
+            color: "#ff9900",
+            fontFamily: "Inter Tight",
+          },
+        }}
+      />
     </Box>
   );
 };

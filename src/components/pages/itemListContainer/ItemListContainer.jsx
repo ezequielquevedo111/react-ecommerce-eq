@@ -2,10 +2,11 @@ import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { productosMagicos } from "../../../productsMock";
+
 const ItemListContainer = ({ greeting = "PRODUCTOS MÁGICOS" }) => {
   const [saveProducts, setSaveProducts] = useState([]);
-
   const { category } = useParams();
+  /*ITEM LIST O HOME CON FILTRADO SEGUN CATEGORIA*/
   useEffect(() => {
     let productsCategoryFound = productosMagicos.filter(
       (product) => product.category === category
