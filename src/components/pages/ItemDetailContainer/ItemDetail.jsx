@@ -13,7 +13,7 @@ import {
 import CounterContainer from "../../common/counter/CounterContainer";
 import { Toaster } from "react-hot-toast";
 
-const ItemDetail = ({ oneProduct, addProduct }) => {
+const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
   /*ITEM DETAIL CON CHAKRA UI*/
   return (
     <Box
@@ -92,6 +92,7 @@ const ItemDetail = ({ oneProduct, addProduct }) => {
               <CounterContainer
                 stock={oneProduct.stock}
                 addProduct={addProduct}
+                initialValue={totalQuantityProduct}
               />
             </Box>
           </ButtonGroup>

@@ -10,7 +10,7 @@ const CartGlobalContextProvider = ({ children }) => {
     if (isItSet) {
       let newCart = cartProduct.map((product) => {
         if (product.id === item.id) {
-          return { ...product, quantity: product.quantity + item.quantity };
+          return { ...product, quantity: item.quantity };
         } else {
           return product;
         }
@@ -31,10 +31,37 @@ const CartGlobalContextProvider = ({ children }) => {
     return productSaved;
   };
 
+  //Calcular el total del carrito//
+  const getTotalAmount = () => {
+    let total = cartProduct.reduce((acc, product) => {
+      return acc + product.price * product.quantity;
+    }, 0);
+    return total;
+  };
+
+  //Calcular el total de items//
+  const getTotalProductsQuantity = () => {
+    let total = cartProduct.reduce((acc, product) => {
+      return acc + product.quantity;
+    }, 0);
+    return total;
+  };
+
+  //Calcular y mostrar la cantidad del item agregado al carrito en el mismo carrito y en detalle//
+  const getQuantityFromId = (id) => {
+    const productCart = cartProduct.find(
+      (product) => product.id === parseInt(id)
+    );
+    return productCart?.quantity;
+  };
+
   let data = {
     cartProduct,
     addProductCart,
     deleteProductCart,
+    getTotalAmount,
+    getTotalProductsQuantity,
+    getQuantityFromId,
   };
   return (
     <CartGlobalContext.Provider value={data}>

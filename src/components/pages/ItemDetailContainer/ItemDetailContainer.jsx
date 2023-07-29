@@ -8,7 +8,8 @@ import { toast } from "react-hot-toast";
 const ItemDetailContainer = () => {
   const [oneProduct, setOneProduct] = useState({});
   const { id } = useParams();
-  const { addProductCart } = useContext(CartGlobalContext);
+  const { addProductCart, getQuantityFromId } = useContext(CartGlobalContext);
+  const totalQuantityProduct = getQuantityFromId(id);
 
   /*ITEM DETAIL CON ESTADO GLOBAL Y EL FILTRO SEGUN EL ID*/
   useEffect(() => {
@@ -29,7 +30,11 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      <ItemDetail oneProduct={oneProduct} addProduct={addProduct} />
+      <ItemDetail
+        oneProduct={oneProduct}
+        addProduct={addProduct}
+        totalQuantityProduct={totalQuantityProduct}
+      />
     </>
   );
 };

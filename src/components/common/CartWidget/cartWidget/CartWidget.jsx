@@ -5,7 +5,9 @@ import { GiCauldron } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { CartGlobalContext } from "../../../../context/CartGlobalContext";
 const CartWidget = () => {
-  const { cartProduct } = useContext(CartGlobalContext);
+  const { cartProduct, getTotalProductsQuantity } =
+    useContext(CartGlobalContext);
+  let total = getTotalProductsQuantity();
   /*WIDGET DEL CARRITO CON CONDICIONAL PARA QUE MUESTRE O NO LOS PRODUCTOS AGREGADOS*/
   return (
     <Box
@@ -28,7 +30,7 @@ const CartWidget = () => {
             height={"20px"}
             borderRadius={"5px"}
           >
-            {cartProduct.length}
+            {total}
           </Badge>
         )}
         <GiCauldron color="#c68e01" size={"30px"} />

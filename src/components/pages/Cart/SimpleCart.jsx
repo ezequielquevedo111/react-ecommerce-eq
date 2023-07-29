@@ -11,7 +11,7 @@ import {
 import { DeleteIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 
-const SimpleCart = ({ product, deleteProductCart }) => {
+const SimpleCart = ({ product, deleteProductCart, getTotalById }) => {
   return (
     <Card
       direction={{ base: "column", sm: "row" }}
@@ -54,7 +54,7 @@ const SimpleCart = ({ product, deleteProductCart }) => {
             Cantidad: {product.quantity}
           </Text>
           <Text textAlign={"center"} p={"2px"}>
-            $50.000
+            ${product.price}
           </Text>
         </CardBody>
 

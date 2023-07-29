@@ -4,6 +4,7 @@ import {
   Container,
   Flex,
   Heading,
+  Text,
   VStack,
 } from "@chakra-ui/react";
 
@@ -11,7 +12,7 @@ import { Link } from "react-router-dom";
 import SimpleCart from "./SimpleCart";
 import { Toaster } from "react-hot-toast";
 
-const Cart = ({ cartProduct, deleteProductCart }) => {
+const Cart = ({ cartProduct, deleteProductCart, total }) => {
   return (
     /*PAGE DE CART CON CONDICIONAL DEPENDIENDO SI HAY ITEMS AGREGADOS O NO*/
     <Container
@@ -46,6 +47,16 @@ const Cart = ({ cartProduct, deleteProductCart }) => {
                   />
                 );
               })}
+              <VStack
+                backgroundColor={"#071028"}
+                color={"#c68e01"}
+                w="4xl"
+                h="max-content"
+                borderRadius="md"
+              >
+                <Text size="md">Total: $ {total}</Text>
+              </VStack>
+
               <VStack h="100px" w="full" justifyContent={"flex-end"} py="5">
                 <Button
                   as={Link}
