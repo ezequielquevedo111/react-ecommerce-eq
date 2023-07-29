@@ -5,7 +5,7 @@ import {
   NumberInputField,
   NumberInputStepper,
 } from "@chakra-ui/number-input";
-import { Alert, AlertTitle, Box, Button, CloseButton } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 const Counter = ({ stock, add, subtract, addProduct, counterCount }) => {

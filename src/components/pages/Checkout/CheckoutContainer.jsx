@@ -21,11 +21,7 @@ const CheckoutContainer = () => {
     onSubmit: (data) => {
       Swal.fire({
         title: "¿Deseas confirmar tu compra?",
-        // icon: "warning",
-        // background: "#ffffff",
-        // color: "#071028",
         background: "#071028",
-
         color: "#c68e01",
         showCancelButton: true,
         confirmButtonColor: "#16213d",
@@ -40,7 +36,6 @@ const CheckoutContainer = () => {
             color: "#c68e01",
             text: "Muchas gracias por tu compra",
             background: "#071028",
-            // confirmButtonColor: "#16213d",
             showConfirmButton: false,
           });
           console.log(data);
