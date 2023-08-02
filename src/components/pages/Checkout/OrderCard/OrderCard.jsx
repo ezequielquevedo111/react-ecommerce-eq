@@ -5,7 +5,7 @@ const OrderCard = ({ orderById }) => {
   return (
     <Flex
       w={"full"}
-      backgroundColor={"#16213d"}
+      backgroundColor={"#1f304e"}
       color={"#c68e01"}
       h={"md"}
       direction={"column"}

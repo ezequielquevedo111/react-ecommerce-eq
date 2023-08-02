@@ -4,7 +4,7 @@ function Footer() {
   return (
     <Box w="100%" h="200px">
       <Flex
-        backgroundColor={"#0e1428"}
+        backgroundColor={"#f5e6cc"}
         color={"#c68e01"}
         w="full"
         h="full"

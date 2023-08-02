@@ -39,6 +39,7 @@ const DetailForm = ({ handleSubmit, handleChange, errors }) => {
                 type="text"
                 name="name"
                 onChange={handleChange}
+                backgroundColor={"#f1f1f1"}
               />
               <FormErrorMessage>{errors.name}</FormErrorMessage>
             </FormControl>
@@ -53,6 +54,7 @@ const DetailForm = ({ handleSubmit, handleChange, errors }) => {
                 type="text"
                 name="lastname"
                 onChange={handleChange}
+                backgroundColor={"#f1f1f1"}
               />
               <FormErrorMessage>{errors.lastname}</FormErrorMessage>
             </FormControl>
@@ -65,6 +67,7 @@ const DetailForm = ({ handleSubmit, handleChange, errors }) => {
                 type="number"
                 name="phone"
                 onChange={handleChange}
+                backgroundColor={"#f1f1f1"}
               />
               <FormErrorMessage>{errors.phone}</FormErrorMessage>
             </FormControl>
@@ -77,6 +80,7 @@ const DetailForm = ({ handleSubmit, handleChange, errors }) => {
                 type="text"
                 name="email"
                 onChange={handleChange}
+                backgroundColor={"#f1f1f1"}
               />
               <FormErrorMessage>{errors.email}</FormErrorMessage>
             </FormControl>
@@ -91,6 +95,7 @@ const DetailForm = ({ handleSubmit, handleChange, errors }) => {
                 type="text"
                 name="repeatEmail"
                 onChange={handleChange}
+                backgroundColor={"#f1f1f1"}
               />
               <FormErrorMessage>{errors.repeatEmail}</FormErrorMessage>
             </FormControl>

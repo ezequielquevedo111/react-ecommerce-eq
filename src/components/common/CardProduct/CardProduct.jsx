@@ -17,7 +17,7 @@ const CardProduct = ({ product }) => {
   /*CARD DEL PRODUCTO BASE*/
   return (
     <Card
-      backgroundColor={"#071028"}
+      backgroundColor={"#1f304e "}
       color={"#c68e01"}
       size="md"
       maxW="400px"
@@ -44,7 +44,7 @@ const CardProduct = ({ product }) => {
         </Stack>
       </CardBody>
       <CardFooter
-        backgroundColor={"#ff9900"}
+        backgroundColor={"#1f304e"}
         borderRadius="sm"
         justify="space-around"
       >
@@ -64,8 +64,8 @@ const CardProduct = ({ product }) => {
               <Button
                 variant="solid"
                 size="md"
-                backgroundColor="#071028"
-                color="#ff9900"
+                backgroundColor="#ffffff"
+                color="#1f304e"
                 as={Link}
                 to={`/itemDetail/${product.id}`}
               >

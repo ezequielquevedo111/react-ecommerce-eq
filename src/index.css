@@ -8,8 +8,8 @@
 }
 
 * ::-webkit-scrollbar {
-  background-color: #0e1428;
   scroll-behavior: smooth;
+  background-color: #f5e6cc;
 }
 
 * ::-webkit-scrollbar-thumb {

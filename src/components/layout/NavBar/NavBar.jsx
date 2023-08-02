@@ -9,7 +9,7 @@ function NavBar() {
     <SimpleGrid
       columns={2}
       justifyItems={"center"}
-      backgroundColor={"#0e1428"}
+      backgroundColor={"#f5e6cc"}
       color={"#c68e01"}
     >
       <SimpleGrid maxW={["50px", "100px", "200px"]}>

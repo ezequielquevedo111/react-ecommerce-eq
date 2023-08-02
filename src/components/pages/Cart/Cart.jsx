@@ -19,7 +19,7 @@ const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
     <Container
       maxW="full"
       h={cartProduct.length > 0 ? "8xl" : "4xl"}
-      backgroundColor={"#0e1428"}
+      backgroundColor={"#f5e6cc"}
     >
       <Flex direction="column" alignItems="center">
         <Box>
@@ -32,7 +32,7 @@ const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
           </VStack>
           {cartProduct.length > 0 ? (
             <VStack
-              backgroundColor={"#16213d"}
+              backgroundColor={"#ffffff"}
               w="7xl"
               h="max-content"
               color={"#c68e01"}
@@ -49,7 +49,7 @@ const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
                 );
               })}
               <HStack
-                backgroundColor={"#071028"}
+                backgroundColor={"#1f304e"}
                 color={"#c68e01"}
                 w="4xl"
                 h="80px"
@@ -60,8 +60,10 @@ const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
                 <Text size="md">Total: $ {total}</Text>
                 <Button
                   variant="solid"
-                  backgroundColor="#FFBA52"
-                  color="#071028"
+                  // backgroundColor="#FFBA52"
+                  // color="#071028"
+                  backgroundColor={"#f1f1f1"}
+                  color={"#0e1428"}
                   onClick={deleteAllCart}
                 >
                   Eliminar carrito
@@ -73,8 +75,8 @@ const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
                   as={Link}
                   to={"/checkout"}
                   variant="solid"
-                  backgroundColor={"#0e1428"}
-                  color={"#c68e01"}
+                  backgroundColor={"#f1f1f1"}
+                  color={"#0e1428"}
                 >
                   Continuar compra
                 </Button>
