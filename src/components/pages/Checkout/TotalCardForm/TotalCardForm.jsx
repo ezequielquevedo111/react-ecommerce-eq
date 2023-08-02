@@ -23,11 +23,14 @@ const TotalCardForm = ({ product }) => {
         justifyContent="space-between"
         alignItems="center"
       >
-        <VStack alignItems="flex-start">
+        <VStack alignItems="flex-start" flexWrap={"no-wrap"}>
           <Heading size="sm">{product.title}</Heading>
         </VStack>
+        <VStack alignItems="center">
+          <Heading size="sm">C/U: {product.quantity}</Heading>
+        </VStack>
         <Heading size="sm" textAlign="end">
-          $50.000
+          Valor: ${product.price}
         </Heading>
       </Stack>
     </HStack>

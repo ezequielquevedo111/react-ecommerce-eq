@@ -5,10 +5,22 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { database } from "../../../firebaseConfig";
+import {
+  addDoc,
+  collection,
+  serverTimestamp,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
 
 const CheckoutContainer = () => {
-  const { cartProduct } = useContext(CartGlobalContext);
+  const { cartProduct, deleteAllCart, getTotalAmount } =
+    useContext(CartGlobalContext);
+  const [orderById, setOrderById] = useState(null);
   const navigate = useNavigate();
+  const total = getTotalAmount();
+
   /*GENERO LAS VALIDACIONES CON FORMIK Y YUP */
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
@@ -18,6 +30,7 @@ const CheckoutContainer = () => {
       email: "",
       repeatEmail: "",
     },
+
     onSubmit: (data) => {
       Swal.fire({
         title: "¿Deseas confirmar tu compra?",
@@ -30,18 +43,31 @@ const CheckoutContainer = () => {
         cancelButtonText: "Cancelar",
       }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire({
-            icon: "success",
-            title: "Compra exitosa",
-            color: "#c68e01",
-            text: "Muchas gracias por tu compra",
-            background: "#071028",
-            showConfirmButton: false,
+          //Creo la orden para setearla en Firebase//
+          let order = {
+            buyer: data,
+            items: cartProduct,
+            total,
+            date: serverTimestamp(),
+          };
+
+          const newOrderCollection = collection(database, "orders");
+          addDoc(newOrderCollection, order).then((res) => setOrderById(res.id));
+
+          //Modifico el stock en Firebase//
+
+          cartProduct.forEach((product) => {
+            updateDoc(doc(database, "magicProducts", product.id), {
+              stock: product.stock - product.quantity,
+            });
           });
-          console.log(data);
+
+          deleteAllCart();
         }
       });
     },
+
+    //Validaciones del Form//
     validationSchema: Yup.object({
       name: Yup.string()
         .required("Este campo es obligatorio")
@@ -68,6 +94,7 @@ const CheckoutContainer = () => {
     }),
     validateOnChange: false,
   });
+
   /*IMPIDO QUE SE RENDERICE LA PAGE DE CHECKOUT SI NO HAY NINGUN PRODUCTO AGREGADO */
   useEffect(() => {
     if (cartProduct.length === 0) {
@@ -81,6 +108,8 @@ const CheckoutContainer = () => {
       handleSubmit={handleSubmit}
       handleChange={handleChange}
       errors={errors}
+      total={total}
+      orderById={orderById}
     />
   );
 };

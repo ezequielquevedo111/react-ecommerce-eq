@@ -1,28 +1,31 @@
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { productosMagicos } from "../../../productsMock";
+import { database } from "../../../firebaseConfig";
+import { getDocs, collection, query, where, addDoc } from "firebase/firestore";
 
 const ItemListContainer = ({ greeting = "PRODUCTOS MÁGICOS" }) => {
   const [saveProducts, setSaveProducts] = useState([]);
   const { category } = useParams();
+
   /*ITEM LIST O HOME CON FILTRADO SEGUN CATEGORIA*/
   useEffect(() => {
-    let productsCategoryFound = productosMagicos.filter(
-      (product) => product.category === category
-    );
-    const getMagicProducts = new Promise((res) => {
-      setTimeout(() => {
-        res(category === undefined ? productosMagicos : productsCategoryFound);
-      }, 1000);
-    });
-    getMagicProducts
-      .then((res) => {
-        setSaveProducts(res);
-      })
-      .catch((err) => {
-        console.log(err);
+    let productsRefComplete = collection(database, "magicProducts");
+    let productRequest;
+    if (category !== undefined) {
+      productRequest = query(
+        productsRefComplete,
+        where("category", "==", category)
+      );
+    } else {
+      productRequest = productsRefComplete;
+    }
+    getDocs(productRequest).then((res) => {
+      let productsArray = res.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
       });
+      setSaveProducts(productsArray);
+    });
   }, [category]);
 
   return (

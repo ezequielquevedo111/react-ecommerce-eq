@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
-import { productosMagicos } from "../../../productsMock";
+// import { productosMagicos } from "../../../productsMock";
 import ItemDetail from "../ItemDetailContainer/ItemDetail";
 import { useParams } from "react-router-dom";
 import { CartGlobalContext } from "../../../context/CartGlobalContext";
 import { toast } from "react-hot-toast";
+import { collection, getDoc, doc } from "firebase/firestore";
+import { database } from "../../../firebaseConfig";
 
 const ItemDetailContainer = () => {
   const [oneProduct, setOneProduct] = useState({});
@@ -13,13 +15,11 @@ const ItemDetailContainer = () => {
 
   /*ITEM DETAIL CON ESTADO GLOBAL Y EL FILTRO SEGUN EL ID*/
   useEffect(() => {
-    let productFound = productosMagicos.find(
-      (product) => product.id === Number(id)
-    );
-    const productSelected = new Promise((res) => {
-      res(productFound);
+    let productsRef = collection(database, "magicProducts");
+    let productByRef = doc(productsRef, id);
+    getDoc(productByRef).then((res) => {
+      setOneProduct({ ...res.data(), id: res.id });
     });
-    productSelected.then((res) => setOneProduct(res));
   }, [id]);
 
   const addProduct = (cantidad) => {

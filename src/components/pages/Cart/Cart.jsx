@@ -3,6 +3,7 @@ import {
   Button,
   Container,
   Flex,
+  HStack,
   Heading,
   Text,
   VStack,
@@ -12,7 +13,7 @@ import { Link } from "react-router-dom";
 import SimpleCart from "./SimpleCart";
 import { Toaster } from "react-hot-toast";
 
-const Cart = ({ cartProduct, deleteProductCart, total }) => {
+const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
   return (
     /*PAGE DE CART CON CONDICIONAL DEPENDIENDO SI HAY ITEMS AGREGADOS O NO*/
     <Container
@@ -47,15 +48,25 @@ const Cart = ({ cartProduct, deleteProductCart, total }) => {
                   />
                 );
               })}
-              <VStack
+              <HStack
                 backgroundColor={"#071028"}
                 color={"#c68e01"}
                 w="4xl"
-                h="max-content"
+                h="80px"
                 borderRadius="md"
+                gap={"7.5rem"}
+                justify={"center"}
               >
                 <Text size="md">Total: $ {total}</Text>
-              </VStack>
+                <Button
+                  variant="solid"
+                  backgroundColor="#FFBA52"
+                  color="#071028"
+                  onClick={deleteAllCart}
+                >
+                  Eliminar carrito
+                </Button>
+              </HStack>
 
               <VStack h="100px" w="full" justifyContent={"flex-end"} py="5">
                 <Button

@@ -1,6 +1,5 @@
 export let productosMagicos = [
   {
-    id: 1,
     title: "Varita de Sauco",
     price: 100000,
     stock: 8,
@@ -10,7 +9,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687817602/varita-de-sauco.png",
   },
   {
-    id: 2,
     title: "Varita de Harry Potter (Pluma de Fenix)",
     price: 70000,
     stock: 10,
@@ -20,7 +18,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687817602/varita-harry-potter.png",
   },
   {
-    id: 3,
     title: "Varita de Tom Ryddle",
     price: 70000,
     stock: 10,
@@ -30,7 +27,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687817602/varita-voldemort.png",
   },
   {
-    id: 4,
     title: "Varita de Hermione Granger",
     price: 35000,
     stock: 15,
@@ -40,7 +36,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688487889/varita_de_hermione-removebg-preview_ozpwhx.png",
   },
   {
-    id: 5,
     title: "Varita de Ron Weasley (Segunda Varita)",
     price: 12000,
     stock: 13,
@@ -50,7 +45,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687817602/varita-ron.png",
   },
   {
-    id: 6,
     title: "Varita de Draco Malfoy",
     price: 13000,
     stock: 15,
@@ -60,7 +54,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687817602/varita-draco.png",
   },
   {
-    id: 7,
     title: "Varita de Albus Dumbledore (Primera Varita)",
     price: 70000,
     stock: 5,
@@ -70,7 +63,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687885820/varita-de-albus-dumbledore-removebg-preview_hrcern.png",
   },
   {
-    id: 8,
     title: "Varita de Minerva McGonagall",
     price: 16000,
     stock: 8,
@@ -80,7 +72,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687886171/varita-de-minerva-mcgonagall-removebg-preview_dw4pvn.png",
   },
   {
-    id: 9,
     title: "Varita de Peter Pettigrew",
     price: 12000,
     stock: 10,
@@ -90,7 +81,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687886453/varita-de-peter-pettigrew-removebg-preview_fqanab.png",
   },
   {
-    id: 10,
     title: "Varita de Severus Snape",
     price: 17000,
     stock: 11,
@@ -100,7 +90,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687902318/varita-harry-potter-severus-snape-removebg-preview_oh86pq.png",
   },
   {
-    id: 11,
     title: "Poción curadora de forúnculos",
     price: 5000,
     stock: 20,
@@ -110,7 +99,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687819204/pocion-curadora-de-for%C3%BAnculos.webp",
   },
   {
-    id: 12,
     title: "Doxycida (Solución o Poción)",
     price: 7500,
     stock: 20,
@@ -120,7 +108,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687819204/pocion-doxycida.webp",
   },
   {
-    id: 13,
     title: "Poción de la risa",
     price: 3200,
     stock: 25,
@@ -130,7 +117,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687819204/pocion-de-la-risa.webp",
   },
   {
-    id: 14,
     title: "Poción embellecedora",
     price: 10000,
     stock: 30,
@@ -140,7 +126,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687819204/pocion-embellecedora.webp",
   },
   {
-    id: 15,
     title: "Poción para dormir",
     price: 9000,
     stock: 24,
@@ -150,7 +135,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687819204/pocion-para-dormir.webp",
   },
   {
-    id: 16,
     title: "Felix Felicis (Poción de Suerte Líquida)",
     price: 17000,
     stock: 11,
@@ -160,7 +144,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687903470/felix-feliciss-removebg-preview_prfdd8.png",
   },
   {
-    id: 17,
     title: "Solucion para encoger (Poción)",
     price: 17000,
     stock: 11,
@@ -170,7 +153,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687819205/pocion-solucion-para-encoger.webp",
   },
   {
-    id: 18,
     title: "Moco de gusarajo (ingrediente)",
     price: 5000,
     stock: 40,
@@ -180,7 +162,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-moco-de-gusarajo.webp",
   },
   {
-    id: 19,
     title: "Alas de hada (ingrediente)",
     price: 5200,
     stock: 40,
@@ -190,7 +171,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-alas-de-hada.webp",
   },
   {
-    id: 20,
     title: "Cuerno de bicornio (ingrediente)",
     price: 8550,
     stock: 40,
@@ -200,7 +180,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688486456/ingrediente_-_Cuerno_de_bicornio_qb83nh.webp",
   },
   {
-    id: 21,
     title: "Díctamo (ingrediente)",
     price: 3700,
     stock: 40,
@@ -210,7 +189,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-dictamo.webp",
   },
   {
-    id: 22,
     title: "Aguijón de billywig (ingredientes)",
     price: 9000,
     stock: 40,
@@ -220,7 +198,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-aguijon-de-billywig.webp",
   },
   {
-    id: 23,
     title: "Asfódelo (ingrediente)",
     price: 4500,
     stock: 40,
@@ -230,7 +207,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1687821017/ingrediente-asfodelo.webp",
   },
   {
-    id: 24,
     title: "Acónito (ingrediente)",
     price: 6000,
     stock: 40,
@@ -240,7 +216,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688488569/aconito_owfvny.webp",
   },
   {
-    id: 25,
     title: "Anillo de Sorvolo Gaunt (Horrocrux)",
     price: 70000,
     stock: 3,
@@ -250,7 +225,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/anillo_de_sorvolo_gaunt-removebg-preview_yeht1l.png",
   },
   {
-    id: 26,
     title: "Diario de Tom Ryddle (Horrocrux)",
     price: 85000,
     stock: 2,
@@ -260,7 +234,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/diario_de_tom_riddle-removebg-preview_zlzcoz.png",
   },
   {
-    id: 27,
     title: "Copa de Helga Hufflepuff (Horrocrux)",
     price: 65000,
     stock: 3,
@@ -270,7 +243,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/copa_de_helga_huffelpuff-removebg-preview_yfyldf.png",
   },
   {
-    id: 28,
     title: "Guardapelo de Salazar Slytherin (Horrocrux)",
     price: 80000,
     stock: 2,
@@ -280,7 +252,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/guardapelo-removebg-preview_icq88a.png",
   },
   {
-    id: 29,
     title: "Diadema de Rowena Ravenclaw (Horrocrux)",
     price: 75000,
     stock: 3,
@@ -290,7 +261,6 @@ export let productosMagicos = [
     img: "https://res.cloudinary.com/dzzp3rans/image/upload/v1688587027/diadema-de-rowena-ravenclaw-harry-potter-removebg-preview_ijz8cj.png",
   },
   {
-    id: 30,
     title: "Nagini (Horrocrux)",
     price: 85000,
     stock: 2,

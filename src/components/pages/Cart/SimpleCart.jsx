@@ -11,7 +11,7 @@ import {
 import { DeleteIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 
-const SimpleCart = ({ product, deleteProductCart, getTotalById }) => {
+const SimpleCart = ({ product, deleteProductCart }) => {
   return (
     <Card
       direction={{ base: "column", sm: "row" }}
@@ -19,7 +19,7 @@ const SimpleCart = ({ product, deleteProductCart, getTotalById }) => {
       variant="filled"
       h={"150px"}
       w={"4xl"}
-      justify={"space-around"}
+      justify={"space-evenly"}
       align={"center"}
       backgroundColor={"#071028"}
       color={"#c68e01"}

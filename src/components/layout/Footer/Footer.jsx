@@ -1,10 +1,7 @@
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 
 function Footer() {
   return (
-    // <div className={styles.footerContainer}>
-    //   <h3>Copyright los derechos son reservados</h3>
-    // </div>
     <Box w="100%" h="200px">
       <Flex
         backgroundColor={"#0e1428"}

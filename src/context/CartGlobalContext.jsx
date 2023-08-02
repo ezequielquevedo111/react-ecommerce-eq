@@ -49,10 +49,13 @@ const CartGlobalContextProvider = ({ children }) => {
 
   //Calcular y mostrar la cantidad del item agregado al carrito en el mismo carrito y en detalle//
   const getQuantityFromId = (id) => {
-    const productCart = cartProduct.find(
-      (product) => product.id === parseInt(id)
-    );
+    const productCart = cartProduct.find((product) => product.id === id);
     return productCart?.quantity;
+  };
+
+  //Borrar todo el carrito//
+  const deleteAllCart = () => {
+    setCartProduct([]);
   };
 
   let data = {
@@ -62,6 +65,8 @@ const CartGlobalContextProvider = ({ children }) => {
     getTotalAmount,
     getTotalProductsQuantity,
     getQuantityFromId,
+    setCartProduct,
+    deleteAllCart,
   };
   return (
     <CartGlobalContext.Provider value={data}>

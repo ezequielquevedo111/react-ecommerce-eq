@@ -7,10 +7,6 @@ import Logo from "../../common/Logo/Logo";
 function NavBar() {
   return (
     <SimpleGrid
-      // templateColumns="0.7fr 1fr"
-      // templateRows="1fr"
-      // alignItems={"center"}
-      // justifyItems={"center"}
       columns={2}
       justifyItems={"center"}
       backgroundColor={"#0e1428"}
@@ -24,11 +20,7 @@ function NavBar() {
         </Box>
       </SimpleGrid>
 
-      <GridItem
-        p={[5, 10]}
-        // display={"flex"}
-        // flexDirection={["column", "column"]}
-      >
+      <GridItem p={[5, 10]}>
         <Breadcrumb separator=" " fontSize={["sm", "md", "xl"]}>
           <BreadcrumbItem>
             <BreadcrumbLink
@@ -64,6 +56,11 @@ function NavBar() {
               textDecoration={"none"}
             >
               HORROCRUXES
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <BreadcrumbLink as={Link} to="/" textDecoration={"none"}>
+              ORDENES
             </BreadcrumbLink>
           </BreadcrumbItem>
           <CartWidget />
