@@ -21,8 +21,8 @@ const SimpleCart = ({ product, deleteProductCart }) => {
       w={"4xl"}
       justify={"space-evenly"}
       align={"center"}
-      backgroundColor={"#1f304e"}
-      color={"#c68e01"}
+      backgroundColor={"#f1f1f1"}
+      color={"#1f304e"}
     >
       <Image
         objectFit="contain"
@@ -65,9 +65,7 @@ const SimpleCart = ({ product, deleteProductCart }) => {
         >
           <Button
             variant="solid"
-            // backgroundColor="#FFBA52"
-            // color="#071028"
-            backgroundColor={"#f1f1f1"}
+            backgroundColor={"#ffffff"}
             color={"#0e1428"}
             onClick={() => deleteProductCart(product.id)}
           >

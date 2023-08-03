@@ -21,8 +21,8 @@ const SkeletonCard = () => {
             <Skeleton
               w="380px"
               h="280px"
-              startColor="#1f304e"
-              endColor="#1f304e"
+              startColor="#ffffff"
+              endColor="#f1f1f1"
               boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
             ></Skeleton>
             <SkeletonText
@@ -30,8 +30,8 @@ const SkeletonCard = () => {
               noOfLines={1}
               skeletonHeight="80px"
               w="380px"
-              startColor="#1f304e"
-              endColor="#1f304e"
+              startColor="#ffffff"
+              endColor="#f1f1f1"
               boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
             />
           </Box>

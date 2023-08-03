@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
   const { addProductCart, getQuantityFromId } = useContext(CartGlobalContext);
   const totalQuantityProduct = getQuantityFromId(id);
 
-  /*ITEM DETAIL CON ESTADO GLOBAL Y EL FILTRO SEGUN EL ID*/
+  //ITEM DETAIL CON ESTADO GLOBAL Y EL FILTRO SEGUN EL ID//
   useEffect(() => {
     let productsRef = collection(database, "magicProducts");
     let productByRef = doc(productsRef, id);
@@ -22,6 +22,7 @@ const ItemDetailContainer = () => {
     });
   }, [id]);
 
+  //AGREGO PRODUCTO AL CARRITO  Y LANZO ALERTA//
   const addProduct = (cantidad) => {
     let productSavedCart = { ...oneProduct, quantity: cantidad };
     addProductCart(productSavedCart);

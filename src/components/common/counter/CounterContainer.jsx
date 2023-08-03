@@ -12,7 +12,7 @@ const CounterContainer = ({ stock, addProduct, initialValue = 1 }) => {
           icon: "warning",
           title: "¡Límite de stock alcanzado!",
           text: "Has seleccionado el máximo de productos en stock.",
-          background: "#ff9900",
+          background: "#ffffff",
           color: "#16213d",
           confirmButtonColor: "#0e1428",
         });

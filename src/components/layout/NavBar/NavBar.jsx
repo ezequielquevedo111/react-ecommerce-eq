@@ -58,11 +58,6 @@ function NavBar() {
               HORROCRUXES
             </BreadcrumbLink>
           </BreadcrumbItem>
-          <BreadcrumbItem>
-            <BreadcrumbLink as={Link} to="/" textDecoration={"none"}>
-              ORDENES
-            </BreadcrumbLink>
-          </BreadcrumbItem>
           <CartWidget />
         </Breadcrumb>
       </GridItem>

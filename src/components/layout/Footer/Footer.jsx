@@ -2,9 +2,9 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 
 function Footer() {
   return (
-    <Box w="100%" h="200px">
+    <Box w="100%" h="300px">
       <Flex
-        backgroundColor={"#f5e6cc"}
+        backgroundColor={"#1f304e"}
         color={"#c68e01"}
         w="full"
         h="full"

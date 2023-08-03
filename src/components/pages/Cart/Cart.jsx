@@ -13,13 +13,18 @@ import { Link } from "react-router-dom";
 import SimpleCart from "./SimpleCart";
 import { Toaster } from "react-hot-toast";
 
-const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
+const Cart = ({
+  cartProduct,
+  deleteProductCart,
+  total,
+  deleteCartWithAlert,
+}) => {
   return (
     /*PAGE DE CART CON CONDICIONAL DEPENDIENDO SI HAY ITEMS AGREGADOS O NO*/
     <Container
       maxW="full"
       h={cartProduct.length > 0 ? "8xl" : "4xl"}
-      backgroundColor={"#f5e6cc"}
+      backgroundColor={"#FFF5E3"}
     >
       <Flex direction="column" alignItems="center">
         <Box>
@@ -35,7 +40,7 @@ const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
               backgroundColor={"#ffffff"}
               w="7xl"
               h="max-content"
-              color={"#c68e01"}
+              color={"#1f304e"}
               borderRadius="md"
               py="8"
             >
@@ -49,8 +54,8 @@ const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
                 );
               })}
               <HStack
-                backgroundColor={"#1f304e"}
-                color={"#c68e01"}
+                backgroundColor={"#f1f1f1"}
+                color={"#1f304e"}
                 w="4xl"
                 h="80px"
                 borderRadius="md"
@@ -60,11 +65,9 @@ const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
                 <Text size="md">Total: $ {total}</Text>
                 <Button
                   variant="solid"
-                  // backgroundColor="#FFBA52"
-                  // color="#071028"
-                  backgroundColor={"#f1f1f1"}
+                  backgroundColor={"#ffffff"}
                   color={"#0e1428"}
-                  onClick={deleteAllCart}
+                  onClick={deleteCartWithAlert}
                 >
                   Eliminar carrito
                 </Button>
@@ -74,9 +77,9 @@ const Cart = ({ cartProduct, deleteProductCart, total, deleteAllCart }) => {
                 <Button
                   as={Link}
                   to={"/checkout"}
-                  variant="solid"
-                  backgroundColor={"#f1f1f1"}
-                  color={"#0e1428"}
+                  backgroundColor={"#1f304e"}
+                  color={"#ffffff"}
+                  _hover={{ backgroundColor: "#f1f1f1", textColor: "#1f304e" }}
                 >
                   Continuar compra
                 </Button>

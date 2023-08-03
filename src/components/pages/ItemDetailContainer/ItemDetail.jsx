@@ -22,8 +22,8 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
       display="flex"
       flexDirection="column"
       w="100%"
-      h="800px"
-      backgroundColor={"#f5e6cc"}
+      h="container.lg"
+      backgroundColor={"#FFF5E3"}
       justifyItems="center"
       alignItems="center"
       paddingTop="80px"
@@ -39,8 +39,8 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
 
       {Object.entries(oneProduct).length > 0 ? (
         <Card
-          backgroundColor={"#1f304e"}
-          color={"#c68e01"}
+          backgroundColor={"#f1f1f1"}
+          color={"#1f304e"}
           size="md"
           maxW="400px"
           maxH="500px"
@@ -76,7 +76,7 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
             </Stack>
           </CardBody>
           <CardFooter
-            backgroundColor={"#1f304e"}
+            backgroundColor={"#f1f1f1"}
             borderRadius="sm"
             justify="space-around"
           >
@@ -106,8 +106,8 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
           <Skeleton
             w="400px"
             h="465px"
-            startColor="#1f304e"
-            endColor="#1f304e"
+            startColor="#ffffff"
+            endColor="#f1f1f1"
             boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
           ></Skeleton>
           <SkeletonText
@@ -116,8 +116,8 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
             spacing="1"
             skeletonHeight="80px"
             w="400px"
-            startColor="#1f304e"
-            endColor="#1f304e"
+            startColor="#ffffff"
+            endColor="#f1f1f1"
             boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
           />
         </Box>

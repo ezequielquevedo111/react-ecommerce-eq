@@ -21,12 +21,11 @@ const Checkout = ({
   orderById,
 }) => {
   return (
-    <Container maxW="full" backgroundColor={"#f5e6cc"} py={[5, 20, 40]}>
+    <Container maxW="full" backgroundColor={"#FFF5E3"} py={[5, 20, 40]}>
       <Container
         maxW={["400px", "600px", "1280px"]}
         maxH={["360px", "400px", "1000px"]}
         p={[0, 5, 10]}
-        // backgroundColor={"#f5e6cc"}
         backgroundColor={"#ffffff"}
         color={"#c68e01"}
         borderRadius="md"
@@ -48,7 +47,6 @@ const Checkout = ({
               p={10}
               spacing={10}
               alignItems="space-between"
-              // backgroundColor={"#16213d"}
               backgroundColor={"#1f304e"}
             >
               <VStack alignItems="flex-start" spacing={5}>

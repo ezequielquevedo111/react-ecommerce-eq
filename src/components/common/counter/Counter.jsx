@@ -17,8 +17,9 @@ const Counter = ({ stock, add, subtract, addProduct, counterCount }) => {
             <Button
               variant="solid"
               size="md"
-              backgroundColor="#ffffff"
-              color="#1f304e"
+              backgroundColor="#1f304e"
+              color="#ffffff"
+              _hover={{ backgroundColor: "#ffffff", textColor: "#0e1428" }}
               onClick={() => addProduct(counterCount)}
             >
               Agregar al carrito
@@ -34,20 +35,20 @@ const Counter = ({ stock, add, subtract, addProduct, counterCount }) => {
           max={stock}
           size="sm"
           w={"100px"}
-          backgroundColor={"#ffffff"}
-          color={"#1f304e"}
+          backgroundColor="#1f304e"
+          color="#ffffff"
           borderColor={"#1f304e"}
         >
           <NumberInputField />
           <NumberInputStepper>
             <NumberIncrementStepper
-              backgroundColor={"#fffffff"}
-              color={"#1f304e"}
+              backgroundColor="#1f304e"
+              color="#ffffff"
               onClick={add}
             />
             <NumberDecrementStepper
-              backgroundColor={"#ffffff"}
-              color={"#1f304e"}
+              backgroundColor="#1f304e"
+              color="#ffffff"
               onClick={subtract}
             />
           </NumberInputStepper>

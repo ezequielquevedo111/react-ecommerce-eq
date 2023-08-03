@@ -7,28 +7,26 @@ const ItemList = ({ greeting, products, category }) => {
   return (
     <Container maxW="container.2xl" p="0">
       {category === undefined && (
-        <SimpleGrid columns={[1, 2]} backgroundColor={"#f5e6cc "} p={5}>
-          <Box
-            display={"flex"}
-            w="100%"
-            h={"900px"}
-            textAlign={"end"}
-            alignItems={"center"}
-            color={"#c68e01"}
-            justifyContent={"center"}
-          >
-            <Heading fontSize={"8xl"} fontWeight={"900"}>
-              LOS PRODUCTOS MÁGICOS QUE TANTO DESEAS
-            </Heading>
-          </Box>
-        </SimpleGrid>
+        <Flex
+          direction="column"
+          justify="center"
+          textAlign="center"
+          w="100%"
+          h={"900px"}
+          color={"#c68e01"}
+          backgroundColor={"#f5e6cc"}
+        >
+          <Heading fontSize={"7xl"} fontWeight={"900"}>
+            LOS PRODUCTOS MÁGICOS QUE TANTO DESEAS
+          </Heading>
+        </Flex>
       )}
       <Flex
         flexDirection="column"
         textAlign="center"
         alignContent="center"
         p={40}
-        backgroundColor={"#f5e6cc "}
+        backgroundColor={"#FFF5E3"}
       >
         <Heading
           fontSize="5xl"

@@ -5,7 +5,7 @@ const OrderCard = ({ orderById }) => {
   return (
     <Flex
       w={"full"}
-      backgroundColor={"#1f304e"}
+      backgroundColor={"#f1f1f1"}
       color={"#c68e01"}
       h={"md"}
       direction={"column"}
@@ -15,9 +15,15 @@ const OrderCard = ({ orderById }) => {
     >
       <Heading>Muchas gracias por tu compra:</Heading>
       <Text>El código de tu compra es: {orderById}</Text>
-      <Text>Ve a la sección ordenes para visualizar el detalle.</Text>
       <Flex w={"full"} justifyContent={"center"}>
-        <Button variant="solid" backgroundColor={"#ffffff"} as={Link} to={"/"}>
+        <Button
+          variant="solid"
+          as={Link}
+          to={"/"}
+          backgroundColor={"#0e1428"}
+          color={"#ffffff"}
+          _hover={{ backgroundColor: "#f1f1f1", textColor: "#0e1428" }}
+        >
           Volver a comprar
         </Button>
       </Flex>
