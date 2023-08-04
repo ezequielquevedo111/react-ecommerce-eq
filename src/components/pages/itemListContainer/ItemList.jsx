@@ -1,6 +1,15 @@
 import CardProduct from "../../common/CardProduct/CardProduct";
-import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  IconButton,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import SkeletonCard from "./SkeletonCard";
+import { ArrowDownIcon } from "@chakra-ui/icons";
 
 const ItemList = ({ greeting, products, category }) => {
   /*ITEM LIST O HOME CON MAPEO PARA PINTAR PRODUCTOS*/
@@ -9,35 +18,52 @@ const ItemList = ({ greeting, products, category }) => {
       {category === undefined && (
         <Flex
           direction="column"
-          justify="center"
-          textAlign="center"
+          justify="space-evenly"
+          align="center"
+          // paddingTop={"260px"}
+          paddingLeft={["15px", "30px"]}
           w="100%"
-          h={"900px"}
-          color={"#c68e01"}
-          backgroundColor={"#f5e6cc"}
+          h={["600px", "1200px"]}
+          color={"#FFF5E3"}
+          backgroundColor={"#1f1f1f"}
         >
-          <Heading fontSize={"7xl"} fontWeight={"900"}>
+          <Heading
+            fontSize={["4xl", "5xl", "7xl", "9xl"]}
+            fontWeight={"900"}
+            textAlign="left"
+          >
             LOS PRODUCTOS MÁGICOS QUE TANTO DESEAS
           </Heading>
+          <IconButton
+            variant="outline"
+            backgroundColor={"#FFF5E3"}
+            aria-label="Call Sage"
+            fontSize="20px"
+            w="80px"
+            _hover={{ backgroundColor: "#333333", color: "#FFF5E3" }}
+            icon={<ArrowDownIcon />}
+          />
         </Flex>
       )}
       <Flex
         flexDirection="column"
         textAlign="center"
-        alignContent="center"
+        alignItems={["center", "center"]}
+        justify={["space-around"]}
         p={40}
         backgroundColor={"#FFF5E3"}
       >
         <Heading
-          fontSize="5xl"
-          color={"#c68e01"}
+          fontSize={["3xl", "3xl", "5xl"]}
+          color={"#1f1f1f"}
           fontFamily={"Inter Tight"}
+          paddingTop="100px"
           paddingBottom="20"
         >
           {!category ? greeting : category.toUpperCase()}
         </Heading>
         {products.length >= 1 ? (
-          <SimpleGrid minChildWidth="300px" spacing={6}>
+          <Flex wrap="wrap" columnGap="60px" rowGap="60px" justify="center">
             {products.map((product) => {
               return (
                 <CardProduct
@@ -47,7 +73,7 @@ const ItemList = ({ greeting, products, category }) => {
                 />
               );
             })}
-          </SimpleGrid>
+          </Flex>
         ) : (
           <SimpleGrid minChildWidth="300px" spacing={6}>
             <SkeletonCard />

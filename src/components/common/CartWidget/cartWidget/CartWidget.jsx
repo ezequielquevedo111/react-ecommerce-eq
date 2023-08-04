@@ -16,16 +16,11 @@ const CartWidget = () => {
       paddingLeft={"10px"}
       href={"#"}
     >
-      <BreadcrumbLink
-        display={"flex"}
-        flexDirection={"row-reverse"}
-        as={Link}
-        to="/cart"
-      >
+      <Box display={"flex"} flexDirection={"row-reverse"} as={Link} to="/cart">
         {cartProduct.length > 0 && (
           <Badge
-            color={"#0e1428"}
-            backgroundColor={"#c68e01"}
+            color={"#1f1f1f"}
+            backgroundColor={"#FFF5E3"}
             variant="solid"
             height={"20px"}
             borderRadius={"5px"}
@@ -33,8 +28,8 @@ const CartWidget = () => {
             {total}
           </Badge>
         )}
-        <GiCauldron color="#c68e01" size={"30px"} />
-      </BreadcrumbLink>
+        <GiCauldron color="#FFF5E3" size={"30px"} />
+      </Box>
     </Box>
   );
 };

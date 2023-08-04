@@ -21,8 +21,8 @@ const SimpleCart = ({ product, deleteProductCart }) => {
       w={"4xl"}
       justify={"space-evenly"}
       align={"center"}
-      backgroundColor={"#f1f1f1"}
-      color={"#1f304e"}
+      backgroundColor={"#1f1f1f"}
+      color={"#FFF5E3"}
     >
       <Image
         objectFit="contain"

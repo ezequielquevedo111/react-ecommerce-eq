@@ -8,6 +8,7 @@ import {
   Heading,
   Image,
   Stack,
+  Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
@@ -17,34 +18,35 @@ const CardProduct = ({ product }) => {
   /*CARD DEL PRODUCTO BASE*/
   return (
     <Card
-      backgroundColor={"#f1f1f1"}
-      color={"#1f304e"}
+      backgroundColor={"#FFF5E3"}
+      color={"#1f1f1f"}
       size="md"
-      maxW="400px"
-      maxH="500px"
+      w={["200px", "250px", "375px", "375px"]}
+      h={["250px", "300px", "370px", "370px"]}
       display={"flex"}
       boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
     >
       <CardBody>
         <Stack align="center">
           <Image
-            boxSize="350px"
+            boxSize={["200px", "250px", "350px"]}
             src={product.img}
             alt={product.title}
             objectFit="contain"
-            height={"200px"}
-            width={"150px"}
+            height={["110px", "110px", "200px", "200px"]}
+            width={["110px", "110px", "150px", "150px"]}
           />
         </Stack>
 
         <Stack mt="6" spacing="3">
-          <Heading size="md" fontFamily={"Harry Potter"}>
+          <Text fontSize={["md", "lg", "xl"]} fontFamily={"Harry Potter"}>
             {product.title}
-          </Heading>
+          </Text>
         </Stack>
       </CardBody>
       <CardFooter
-        backgroundColor={"#f1f1f1"}
+        backgroundColor={"#FFF5E3"}
+        color={"#1f1f1f"}
         borderRadius="sm"
         justify="space-around"
       >
@@ -63,7 +65,7 @@ const CardProduct = ({ product }) => {
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
               <Button
                 variant="solid"
-                size="md"
+                size={["xs", "sm", "md"]}
                 backgroundColor="#1f304e"
                 color="#ffffff"
                 as={Link}

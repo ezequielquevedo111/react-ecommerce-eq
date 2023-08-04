@@ -30,7 +30,7 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
     >
       <Heading
         fontFamily={"Inter Tight"}
-        color={"#c68e01"}
+        color={"#1f1f1f"}
         size="2xl"
         paddingBottom={"100px"}
       >
@@ -39,8 +39,8 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
 
       {Object.entries(oneProduct).length > 0 ? (
         <Card
-          backgroundColor={"#f1f1f1"}
-          color={"#1f304e"}
+          backgroundColor={"#FFF5E3"}
+          color={"#1f1f1f"}
           size="md"
           maxW="400px"
           maxH="500px"
@@ -76,7 +76,7 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
             </Stack>
           </CardBody>
           <CardFooter
-            backgroundColor={"#f1f1f1"}
+            backgroundColor={"#FFF5E3"}
             borderRadius="sm"
             justify="space-around"
           >
@@ -106,8 +106,8 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
           <Skeleton
             w="400px"
             h="465px"
-            startColor="#ffffff"
-            endColor="#f1f1f1"
+            startColor="#FFF5E3"
+            endColor="#FFF5E3"
             boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
           ></Skeleton>
           <SkeletonText
@@ -116,8 +116,8 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
             spacing="1"
             skeletonHeight="80px"
             w="400px"
-            startColor="#ffffff"
-            endColor="#f1f1f1"
+            startColor="#FFF5E3"
+            endColor="#FFF5E3"
             boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
           />
         </Box>
@@ -128,7 +128,7 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
           duration: 3000,
           style: {
             backgroundColor: "#16213d",
-            color: "#ff9900",
+            color: "#FFF5E3",
             fontFamily: "Inter Tight",
           },
         }}

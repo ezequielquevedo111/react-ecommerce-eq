@@ -24,13 +24,13 @@ const Cart = ({
     <Container
       maxW="full"
       h={cartProduct.length > 0 ? "8xl" : "4xl"}
-      backgroundColor={"#FFF5E3"}
+      backgroundColor={"#f5e6cc"}
     >
       <Flex direction="column" alignItems="center">
         <Box>
           <VStack>
             {cartProduct.length > 0 && (
-              <Heading py="16" color={"#c68e01"} size="2xl">
+              <Heading py="16" color={"#1f1f1f"} size="2xl">
                 PRODUCTOS AGREGADOS
               </Heading>
             )}
@@ -54,8 +54,8 @@ const Cart = ({
                 );
               })}
               <HStack
-                backgroundColor={"#f1f1f1"}
-                color={"#1f304e"}
+                backgroundColor={"#1f1f1f"}
+                color={"#FFF5E3"}
                 w="4xl"
                 h="80px"
                 borderRadius="md"
@@ -87,7 +87,7 @@ const Cart = ({
             </VStack>
           ) : (
             <VStack maxW="full" h="4xl" justifyContent="center">
-              <Heading size="2xl" color={"#c68e01"} textAlign={"center"}>
+              <Heading size="2xl" color={"#1f1f1f"} textAlign={"center"}>
                 No hay ningún producto en el carrito ve al inicio para iniciar
                 tu compra
               </Heading>
@@ -100,7 +100,7 @@ const Cart = ({
             duration: 3000,
             style: {
               backgroundColor: "#16213d",
-              color: "#ff9900",
+              color: "#FFF5E3",
               fontFamily: "Inter Tight",
             },
           }}

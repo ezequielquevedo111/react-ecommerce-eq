@@ -24,10 +24,10 @@ const Checkout = ({
     <Container maxW="full" backgroundColor={"#FFF5E3"} py={[5, 20, 40]}>
       <Container
         maxW={["400px", "600px", "1280px"]}
-        maxH={["360px", "400px", "1000px"]}
+        maxH={["360px", "400px", "1200px"]}
         p={[0, 5, 10]}
-        backgroundColor={"#ffffff"}
-        color={"#c68e01"}
+        backgroundColor={"#1f1f1f"}
+        color={"#FFF5E3"}
         borderRadius="md"
       >
         {!orderById ? (
@@ -47,7 +47,8 @@ const Checkout = ({
               p={10}
               spacing={10}
               alignItems="space-between"
-              backgroundColor={"#1f304e"}
+              backgroundColor={"#FFF5E3"}
+              color={"#1f1f1f"}
             >
               <VStack alignItems="flex-start" spacing={5}>
                 <Heading size="2xl">Resumen.</Heading>

@@ -11,7 +11,3 @@
   scroll-behavior: smooth;
   background-color: #f5e6cc;
 }
-
-* ::-webkit-scrollbar-thumb {
-  background-color: #c68e01;
-}
