@@ -14,20 +14,21 @@ import { Link } from "react-router-dom";
 const SimpleCart = ({ product, deleteProductCart }) => {
   return (
     <Card
-      direction={{ base: "column", sm: "row" }}
+      direction={["row", "row", "row", "row", "row"]}
       overflow="hidden"
       variant="filled"
-      h={"150px"}
-      w={"4xl"}
-      justify={"space-evenly"}
+      h={["150px", "150px", "120px", "120px", "200px"]}
+      w={["sm", "md", "lg", "lg", "2xl"]}
+      paddingLeft={["0px", "40px", "50px", "50px", "50px"]}
       align={"center"}
       backgroundColor={"#1f1f1f"}
       color={"#FFF5E3"}
     >
       <Image
         objectFit="contain"
-        maxW={{ base: "100%", sm: "100px" }}
-        maxH={"100px"}
+        w={["80px", "80px", "80px", "100px", "120px"]}
+        h={["60px", "60px", "60px", "80px", "100px"]}
+        marginLeft={["30px", "0px", "0px", "0px", "0px"]}
         src={product.img}
         alt="Caffe Latte"
       />
@@ -35,14 +36,17 @@ const SimpleCart = ({ product, deleteProductCart }) => {
       <Stack
         display={"flex"}
         flexDirection={"row"}
-        gap={"6.6rem"}
+        gap={["0rem", "0rem", "0rem", "0rem", "3.6rem"]}
         h={"120px"}
-        w={"420px"}
-        margin={"right"}
+        w={["300px", "300px", "420px", "420px", "420px"]}
       >
-        <CardBody display={"flex"} flexDirection={"column"} p={"0px"}>
+        <CardBody
+          display={"flex"}
+          flexDirection={"column"}
+          p={["15px", "15px", "20px", "20px", "0px"]}
+        >
           <Heading
-            size="md"
+            size={["xs", "xs", "xs", "xs", "md"]}
             textAlign={"center"}
             as={Link}
             to={`/itemDetail/${product.id}`}
@@ -50,10 +54,18 @@ const SimpleCart = ({ product, deleteProductCart }) => {
             {product.title}
           </Heading>
 
-          <Text textAlign={"center"} p={"7px"}>
+          <Text
+            textAlign={"center"}
+            p={"7px"}
+            fontSize={["xs", "xs", "xs", "xs", "md"]}
+          >
             Cantidad: {product.quantity}
           </Text>
-          <Text textAlign={"center"} p={"2px"}>
+          <Text
+            textAlign={"center"}
+            p={"2px"}
+            fontSize={["xs", "xs", "xs", "xs", "md"]}
+          >
             ${product.price}
           </Text>
         </CardBody>
@@ -69,7 +81,7 @@ const SimpleCart = ({ product, deleteProductCart }) => {
             color={"#0e1428"}
             onClick={() => deleteProductCart(product.id)}
           >
-            <DeleteIcon boxSize={5} />
+            <DeleteIcon boxSize={[2, 2, 3, 3, 5]} />
           </Button>
         </CardFooter>
       </Stack>

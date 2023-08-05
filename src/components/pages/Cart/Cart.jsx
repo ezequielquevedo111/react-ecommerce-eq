@@ -21,92 +21,106 @@ const Cart = ({
 }) => {
   return (
     /*PAGE DE CART CON CONDICIONAL DEPENDIENDO SI HAY ITEMS AGREGADOS O NO*/
-    <Container
-      maxW="full"
-      h={cartProduct.length > 0 ? "8xl" : "4xl"}
-      backgroundColor={"#f5e6cc"}
-    >
-      <Flex direction="column" alignItems="center">
-        <Box>
-          <VStack>
-            {cartProduct.length > 0 && (
-              <Heading py="16" color={"#1f1f1f"} size="2xl">
-                PRODUCTOS AGREGADOS
-              </Heading>
-            )}
-          </VStack>
-          {cartProduct.length > 0 ? (
-            <VStack
-              backgroundColor={"#ffffff"}
-              w="7xl"
-              h="max-content"
-              color={"#1f304e"}
-              borderRadius="md"
-              py="8"
-            >
-              {cartProduct.map((product) => {
-                return (
-                  <SimpleCart
-                    key={product.id}
-                    product={product}
-                    deleteProductCart={deleteProductCart}
-                  />
-                );
-              })}
-              <HStack
-                backgroundColor={"#1f1f1f"}
-                color={"#FFF5E3"}
-                w="4xl"
-                h="80px"
-                borderRadius="md"
-                gap={"7.5rem"}
-                justify={"center"}
-              >
-                <Text size="md">Total: $ {total}</Text>
-                <Button
-                  variant="solid"
-                  backgroundColor={"#ffffff"}
-                  color={"#0e1428"}
-                  onClick={deleteCartWithAlert}
-                >
-                  Eliminar carrito
-                </Button>
-              </HStack>
 
-              <VStack h="100px" w="full" justifyContent={"flex-end"} py="5">
-                <Button
-                  as={Link}
-                  to={"/checkout"}
-                  backgroundColor={"#1f304e"}
-                  color={"#ffffff"}
-                  _hover={{ backgroundColor: "#f1f1f1", textColor: "#1f304e" }}
-                >
-                  Continuar compra
-                </Button>
-              </VStack>
-            </VStack>
-          ) : (
-            <VStack maxW="full" h="4xl" justifyContent="center">
-              <Heading size="2xl" color={"#1f1f1f"} textAlign={"center"}>
-                No hay ningún producto en el carrito ve al inicio para iniciar
-                tu compra
-              </Heading>
-            </VStack>
-          )}
-        </Box>
-        <Toaster
-          position="bottom-right"
-          toastOptions={{
-            duration: 3000,
-            style: {
-              backgroundColor: "#16213d",
-              color: "#FFF5E3",
-              fontFamily: "Inter Tight",
-            },
-          }}
-        />
+    <Flex
+      direction="column"
+      backgroundColor={"#f5e6cc"}
+      maxW={["9xl"]}
+      h={["8xl", "6xl", "6xl", "5xl", "5xl"]}
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Flex>
+        {cartProduct.length > 0 && (
+          <Heading
+            py="20"
+            color={"#1f1f1f"}
+            size={["md", "md", "xl", "2xl", "2xl"]}
+          >
+            PRODUCTOS AGREGADOS
+          </Heading>
+        )}
       </Flex>
-    </Container>
+      {cartProduct.length > 0 ? (
+        <VStack
+        // flexDirection={["column", "column", "column", "column", "column"]}
+        // justifyContent="center"
+        // alignItems="center"
+        // backgroundColor={"#ffffff"}
+        // w={("400px", "xl", "800px", "600px", "80%")}
+        // // w={{ sm: "400px", md: "600px", lg: "600px", xl: "600", "2xl": "60%" }}
+        // h={["350px", "750px", "600px", "550px", "600px"]}
+        // borderRadius="md"
+        // py={["0", "8", "0", "0", "16"]}
+        >
+          {cartProduct.map((product) => {
+            return (
+              <SimpleCart
+                key={product.id}
+                product={product}
+                deleteProductCart={deleteProductCart}
+              />
+            );
+          })}
+          <HStack
+            backgroundColor={"#1f1f1f"}
+            color={"#FFF5E3"}
+            w={["sm", "md", "lg", "lg", "2xl"]}
+            h="80px"
+            borderRadius="base"
+            gap={"7.5rem"}
+            justify={"center"}
+          >
+            <Text fontSize={["xs", "xs", "xs", "md", "md"]}>
+              Total: $ {total}
+            </Text>
+            <Button
+              w={["100px", "100px", "120px", "180px", "200px"]}
+              fontSize={["xs", "xs", "xs", "md"]}
+              variant="solid"
+              backgroundColor={"#ffffff"}
+              color={"#0e1428"}
+              onClick={deleteCartWithAlert}
+            >
+              Eliminar carrito
+            </Button>
+          </HStack>
+
+          <VStack h={"100px"} w="full" justifyContent={"flex-end"} py="5">
+            <Button
+              w={["120px", "120px", "120px", "180px", "200px"]}
+              fontSize={["xs", "xs", "xs", "md"]}
+              as={Link}
+              to={"/checkout"}
+              backgroundColor={"#1f304e"}
+              color={"#ffffff"}
+              _hover={{ backgroundColor: "#f1f1f1", textColor: "#1f304e" }}
+            >
+              Continuar compra
+            </Button>
+          </VStack>
+        </VStack>
+      ) : (
+        <VStack maxW="full" h="4xl" justifyContent="center">
+          <Heading size="2xl" color={"#1f1f1f"} textAlign={"center"}>
+            No hay ningún producto en el carrito ve al inicio para iniciar tu
+            compra
+          </Heading>
+        </VStack>
+      )}
+
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          duration: 3000,
+          style: {
+            backgroundColor: "#16213d",
+            color: "#FFF5E3",
+            fontFamily: "Inter Tight",
+          },
+        }}
+      />
+    </Flex>
   );
 };
 

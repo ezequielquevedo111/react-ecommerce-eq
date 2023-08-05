@@ -75,9 +75,9 @@ const ItemList = ({ greeting, products, category }) => {
             })}
           </Flex>
         ) : (
-          <SimpleGrid minChildWidth="300px" spacing={6}>
+          <Flex wrap="wrap" columnGap="60px" rowGap="60px" justify="center">
             <SkeletonCard />
-          </SimpleGrid>
+          </Flex>
         )}
       </Flex>
     </Container>

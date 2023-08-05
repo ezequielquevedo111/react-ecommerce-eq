@@ -22,17 +22,17 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
       display="flex"
       flexDirection="column"
       w="100%"
-      h="container.lg"
+      h={["container.lg", "container.lg", "container.lg", "container.xl"]}
       backgroundColor={"#FFF5E3"}
-      justifyItems="center"
+      justifyContent="center"
       alignItems="center"
-      paddingTop="80px"
     >
       <Heading
         fontFamily={"Inter Tight"}
         color={"#1f1f1f"}
-        size="2xl"
-        paddingBottom={"100px"}
+        size={["md", "lg", "xl", "2xl"]}
+        paddingBottom={["20px", "20px", "60px", "100px"]}
+        paddingTop={["20px", "0px", "0px", "0px"]}
       >
         PRODUCTO MÁGICO
       </Heading>
@@ -41,9 +41,8 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
         <Card
           backgroundColor={"#FFF5E3"}
           color={"#1f1f1f"}
-          size="md"
-          maxW="400px"
-          maxH="500px"
+          maxW={["300px", "300px", "350px", "400px"]}
+          maxH={["400px", "450px", "450px", "520px"]}
           display={"flex"}
           boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
         >
@@ -54,22 +53,28 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
                 src={oneProduct.img}
                 alt={oneProduct.title}
                 objectFit="contain"
-                height={"200px"}
-                width={"150px"}
+                height={["100px", "100px", "150px", "200px"]}
+                width={["100px", "100px", "120px", "150px"]}
               />
             </Stack>
 
             <Stack mt="6" spacing="3">
-              <Heading size="md" fontFamily={"Harry Potter"}>
+              <Heading
+                size={["sm", "sm", "md", "md"]}
+                fontFamily={"Harry Potter"}
+              >
                 {oneProduct.title}
               </Heading>
               <Box>
-                <Heading size="sm">${oneProduct.price}</Heading>
-                <Text fontSize="sm" py={"10px"}>
+                <Text fontSize={["xs", "xs", "sm"]}>${oneProduct.price}</Text>
+                <Text fontSize={["xs", "xs", "sm"]} py={"10px"}>
                   Stock:
                   {oneProduct.stock}
                 </Text>
-                <Text fontSize="sm" py={"5px"}>
+                <Text
+                  fontSize={["xs", "xs", "sm"]}
+                  py={["0px", "3px", "5px", "5px"]}
+                >
                   {oneProduct.description}
                 </Text>
               </Box>
@@ -79,11 +84,12 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
             backgroundColor={"#FFF5E3"}
             borderRadius="sm"
             justify="space-around"
+            p={["0px", "0px", "25px"]}
           >
             <ButtonGroup
               spacing="2"
               height={"40px"}
-              width={"100px"}
+              width={["100px", "100px"]}
               fontSize={"12px"}
               borderRadius={"2px"}
               display={"flex"}

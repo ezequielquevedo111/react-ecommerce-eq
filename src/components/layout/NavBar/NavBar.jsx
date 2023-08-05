@@ -19,13 +19,14 @@ function NavBar({ display, setDisplay }) {
       zIndex={[10, 15]}
     >
       <Flex
+        w={["90%", "80%", "80%", "80%"]}
         pos="fixed"
         top="1rem"
         right={["1rem", "3rem", "5rem", "5rem", "5rem"]}
         color="#FFF5E3"
         align="center"
         justify="space-around"
-        columnGap={["2rem", "0rem", "0rem", "5rem", "15rem"]}
+        columnGap={["1rem", "0rem", "0rem", "5rem", "15rem"]}
       >
         <Flex
           align="center"
@@ -62,7 +63,7 @@ function NavBar({ display, setDisplay }) {
         </Flex>
         <IconButton
           aria-label="Open Menu"
-          size="lg"
+          size={["sm", "md", "md"]}
           mr={2}
           icon={<HamburgerIcon />}
           display={["flex", "flex", "flex", "none", "none"]}
@@ -90,7 +91,7 @@ function NavBar({ display, setDisplay }) {
             mt={2}
             mr={2}
             aria-label="Close Menu"
-            size="lg"
+            size={"lg"}
             icon={<CloseIcon />}
             onClick={() => setDisplay("none")}
           />

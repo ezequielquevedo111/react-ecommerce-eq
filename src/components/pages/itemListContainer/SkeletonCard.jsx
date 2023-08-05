@@ -19,8 +19,8 @@ const SkeletonCard = () => {
         return (
           <Box backgroundColor={"#0e1428"} key={element.id}>
             <Skeleton
-              w="380px"
-              h="280px"
+              w={["200px", "250px", "375px", "375px"]}
+              h={["200px", "300px", "370px", "370px"]}
               startColor="#ffffff"
               endColor="#f1f1f1"
               boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
@@ -28,8 +28,7 @@ const SkeletonCard = () => {
             <SkeletonText
               mt="2"
               noOfLines={1}
-              skeletonHeight="80px"
-              w="380px"
+              skeletonHeight="100px"
               startColor="#ffffff"
               endColor="#f1f1f1"
               boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}

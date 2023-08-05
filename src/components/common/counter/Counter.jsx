@@ -16,7 +16,7 @@ const Counter = ({ stock, add, subtract, addProduct, counterCount }) => {
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
             <Button
               variant="solid"
-              size="md"
+              size={["xs", "xs", "md", "md"]}
               backgroundColor="#1f304e"
               color="#ffffff"
               _hover={{ backgroundColor: "#ffffff", textColor: "#0e1428" }}
@@ -33,7 +33,7 @@ const Counter = ({ stock, add, subtract, addProduct, counterCount }) => {
           defaultValue={counterCount}
           min={counterCount}
           max={stock}
-          size="sm"
+          size={["xs", "xs", "md", "md"]}
           w={"100px"}
           backgroundColor="#1f304e"
           color="#ffffff"
