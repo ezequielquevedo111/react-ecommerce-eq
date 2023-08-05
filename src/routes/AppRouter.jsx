@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "../components/layout/Layout";
-import { simpleRoutes } from "./simpleRoutes";
+import { simpleRoutes } from "../../src/routes/SimpleRoutes/SimpleRoutes";
 import SaveErrorPage from "./SaveErrorPage";
 
 const AppRouter = () => {
