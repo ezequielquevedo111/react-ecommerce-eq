@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import SaveErrorPage from "./SaveErrorPage";
-import { simpleRoutes } from "../../src/routes/SimpleRoutes/simpleRoutes";
+import { rutasSeparadas } from "../routes/RutasSeparadas/rutasSeparadas";
 
 const AppRouter = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
-        {simpleRoutes.map(({ id, path, Element }) => (
+        {rutasSeparadas.map(({ id, path, Element }) => (
           <Route key={id} path={path} element={<Element />} />
         ))}
       </Route>
