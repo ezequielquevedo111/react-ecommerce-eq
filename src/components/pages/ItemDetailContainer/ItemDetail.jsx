@@ -17,6 +17,7 @@ import { Toaster } from "react-hot-toast";
 
 const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
   /*ITEM DETAIL CON CHAKRA UI*/
+
   return (
     <Box
       display="flex"
@@ -36,7 +37,6 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
       >
         PRODUCTO MÁGICO
       </Heading>
-
       {Object.entries(oneProduct).length > 0 ? (
         <Card
           backgroundColor={"#FFF5E3"}
@@ -110,8 +110,8 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
       ) : (
         <Box backgroundColor={"#0e1428"}>
           <Skeleton
-            w="400px"
-            h="465px"
+            w={["300px", "320px", "350px", "400px", "400px"]}
+            h={["250px", "300px", "400px", "400px", "465px"]}
             startColor="#FFF5E3"
             endColor="#FFF5E3"
             boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
@@ -121,7 +121,7 @@ const ItemDetail = ({ oneProduct, addProduct, totalQuantityProduct }) => {
             noOfLines={1}
             spacing="1"
             skeletonHeight="80px"
-            w="400px"
+            w={["300px", "320px", "350px", "400px", "400px"]}
             startColor="#FFF5E3"
             endColor="#FFF5E3"
             boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}

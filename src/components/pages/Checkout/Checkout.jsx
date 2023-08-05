@@ -1,12 +1,4 @@
-import {
-  Container,
-  Divider,
-  Flex,
-  HStack,
-  Heading,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Divider, Flex, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import TotalCardForm from "./TotalCardForm/TotalCardForm";
 import DetailFormContainer from "./DetailForm/DetailFormContainer";
 import { Toaster } from "react-hot-toast";

@@ -20,7 +20,6 @@ const ItemList = ({ greeting, products, category }) => {
           direction="column"
           justify="space-evenly"
           align="center"
-          // paddingTop={"260px"}
           paddingLeft={["15px", "30px"]}
           w="100%"
           h={["600px", "1200px"]}

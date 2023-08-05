@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import { simpleRoutes } from "./simpleRoutes";
+import SaveErrorPage from "./SaveErrorPage";
 
 const AppRouter = () => {
   return (
@@ -10,7 +11,7 @@ const AppRouter = () => {
           <Route key={id} path={path} element={<Element />} />
         ))}
       </Route>
-      <Route path="*" element={<h1>404 not found</h1>} />
+      <Route path="*" element={<SaveErrorPage />} />
     </Routes>
   );
 };

@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-// import { productosMagicos } from "../../../productsMock";
 import ItemDetail from "../ItemDetailContainer/ItemDetail";
 import { useParams } from "react-router-dom";
 import { CartGlobalContext } from "../../../context/CartGlobalContext";

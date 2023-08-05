@@ -1,11 +1,9 @@
 import {
   AspectRatio,
-  Divider,
   HStack,
   Heading,
   Image,
   Stack,
-  Text,
   VStack,
 } from "@chakra-ui/react";
 
