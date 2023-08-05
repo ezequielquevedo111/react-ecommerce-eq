@@ -34,15 +34,6 @@ const ItemList = ({ greeting, products, category }) => {
           >
             LOS PRODUCTOS MÁGICOS QUE TANTO DESEAS
           </Heading>
-          <IconButton
-            variant="outline"
-            backgroundColor={"#FFF5E3"}
-            aria-label="Call Sage"
-            fontSize="20px"
-            w="80px"
-            _hover={{ backgroundColor: "#333333", color: "#FFF5E3" }}
-            icon={<ArrowDownIcon />}
-          />
         </Flex>
       )}
       <Flex

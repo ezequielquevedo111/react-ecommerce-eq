@@ -18,9 +18,10 @@ const DetailForm = ({ handleSubmit, handleChange, errors }) => {
   return (
     <form onSubmit={handleSubmit}>
       <VStack
-        w={["md", "xl"]}
-        h="full"
+        w={["360px", "400px", "700px", "md", "xl"]}
+        h={["full", "500px", "600px", "850px", "full"]}
         p={[0, 5, 10]}
+        paddingTop={["45px", "45px", "45px", "45px", "45px"]}
         spacing={10}
         alignItems="flex-start"
       >
@@ -110,8 +111,8 @@ const DetailForm = ({ handleSubmit, handleChange, errors }) => {
           </GridItem>
           <GridItem colSpan={2}>
             <Button
-              size="lg"
-              w="full"
+              size={["md", "md", "md", "md", "lg"]}
+              w={["auto", "auto", "full", "full", "full"]}
               backgroundColor={"#ffffff"}
               type="submit"
             >

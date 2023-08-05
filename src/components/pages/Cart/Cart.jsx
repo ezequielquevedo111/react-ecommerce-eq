@@ -42,17 +42,7 @@ const Cart = ({
         )}
       </Flex>
       {cartProduct.length > 0 ? (
-        <VStack
-        // flexDirection={["column", "column", "column", "column", "column"]}
-        // justifyContent="center"
-        // alignItems="center"
-        // backgroundColor={"#ffffff"}
-        // w={("400px", "xl", "800px", "600px", "80%")}
-        // // w={{ sm: "400px", md: "600px", lg: "600px", xl: "600", "2xl": "60%" }}
-        // h={["350px", "750px", "600px", "550px", "600px"]}
-        // borderRadius="md"
-        // py={["0", "8", "0", "0", "16"]}
-        >
+        <VStack>
           {cartProduct.map((product) => {
             return (
               <SimpleCart

@@ -18,18 +18,22 @@ const TotalCardForm = ({ product }) => {
       </AspectRatio>
       <Stack
         spacing={3}
-        w="full"
+        w={["full", "full", "full", "full", "full"]}
         direction="row"
         justifyContent="space-between"
         alignItems="center"
       >
         <VStack alignItems="flex-start" flexWrap={"no-wrap"}>
-          <Heading size="sm">{product.title}</Heading>
+          <Heading size={["xs", "xs", "sm", "sm", "sm"]}>
+            {product.title}
+          </Heading>
         </VStack>
         <VStack alignItems="center">
-          <Heading size="sm">C/U: {product.quantity}</Heading>
+          <Heading size={["xs", "xs", "sm", "sm", "sm"]}>
+            C/U: {product.quantity}
+          </Heading>
         </VStack>
-        <Heading size="sm" textAlign="end">
+        <Heading size={["xs", "xs", "sm", "sm", "sm"]} textAlign="end">
           Valor: ${product.price}
         </Heading>
       </Stack>
