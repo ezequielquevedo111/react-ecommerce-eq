@@ -1,7 +1,7 @@
-import ItemListContainer from "../../components/pages/ItemListContainer/ItemListContainer.jsx";
-import ItemDetailContainer from "../../components/pages/ItemDetailContainer/ItemDetailContainer.jsx";
-import CartContainer from "../../components/pages/Cart/CartContainer.jsx";
-import CheckoutContainer from "../../components/pages/Checkout/CheckoutContainer.jsx";
+import ItemListContainer from "../../components/pages/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "../../components/pages/ItemDetailContainer/ItemDetailContainer";
+import CartContainer from "../../components/pages/Cart/CartContainer";
+import CheckoutContainer from "../../components/pages/Checkout/CheckoutContainer";
 
 export const rutasSeparadas = [
   {
