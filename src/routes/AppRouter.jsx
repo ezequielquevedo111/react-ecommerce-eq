@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import SaveErrorPage from "./SaveErrorPage";
-import { rutasSeparadas } from "../routes/RutasSeparadas/rutasSeparadas";
+import { rutasSeparadas } from "./RutasSeparadas/rutasSeparadas";
 
 const AppRouter = () => {
   return (

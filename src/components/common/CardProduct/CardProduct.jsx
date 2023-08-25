@@ -22,7 +22,7 @@ const CardProduct = ({ product }) => {
       color={"#1f1f1f"}
       size="md"
       w={["200px", "250px", "375px", "375px"]}
-      h={["250px", "300px", "370px", "370px"]}
+      h={["250px", "300px", "370px", "400px"]}
       display={"flex"}
       boxShadow={" 5px 15px 30px -10px rgba(0,0,0,0.76)"}
     >

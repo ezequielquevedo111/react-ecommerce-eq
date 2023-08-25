@@ -1,7 +1,7 @@
-import ItemListContainer from "../../components/pages/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "../../components/pages/ItemDetailContainer/ItemDetailContainer";
 import CartContainer from "../../components/pages/Cart/CartContainer";
 import CheckoutContainer from "../../components/pages/Checkout/CheckoutContainer";
+import ItemListContainer from "../../components/pages/ItemListContainer/ItemListContainer";
 
 export const rutasSeparadas = [
   {
