@@ -11,3 +11,8 @@
   scroll-behavior: smooth;
   background-color: #f5e6cc;
 }
+
+* ::-webkit-scrollbar-thumb {
+  width: 50px;
+  background-color: #1f1f1f;
+}
