@@ -1,4 +1,4 @@
-import ItemListContainer from "../components/pages/ItemListContainer/ItemListContainer.jsx";
+import ItemListContainer from "../components/pages/itemListContainer/ItemListContainer.jsx";
 import ItemDetailContainer from "../components/pages/ItemDetailContainer/ItemDetailContainer.jsx";
 import CartContainer from "../components/pages/Cart/CartContainer.jsx";
 import CheckoutContainer from "../components/pages/Checkout/CheckoutContainer.jsx";

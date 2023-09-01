@@ -1,15 +1,6 @@
 import CardProduct from "../../common/CardProduct/CardProduct";
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  Heading,
-  IconButton,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Container, Flex, Heading } from "@chakra-ui/react";
 import SkeletonCard from "./SkeletonCard";
-import { ArrowDownIcon } from "@chakra-ui/icons";
 
 const ItemList = ({ greeting, products, category }) => {
   /*ITEM LIST O HOME CON MAPEO PARA PINTAR PRODUCTOS*/
